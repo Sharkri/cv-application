@@ -1,5 +1,16 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../fonts/NotoSans-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans";
+}
+
+body {
+  --main-bg-color: #f3f4f6;
+  background-color: var(--main-bg-color);
 }
