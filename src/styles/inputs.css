@@ -1,3 +1,13 @@
+input {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+input:focus {
+  outline: 1px solid #3b82f6;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
