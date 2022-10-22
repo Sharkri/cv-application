@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import InputGroup from "./InputGroup";
 
-class PersonalDetailsForm extends Component {
+class PersonalDetails extends Component {
   render() {
     return (
-      <form className="personal-details-form">
+      <div className="personal-details">
         <InputGroup
           type="text"
           id="full-name"
@@ -32,9 +32,9 @@ class PersonalDetailsForm extends Component {
           labelText="Address"
           placeholder="City, Country"
         />
-      </form>
+      </div>
     );
   }
 }
 
-export default PersonalDetailsForm;
+export default PersonalDetails;
