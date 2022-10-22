@@ -15,14 +15,26 @@ class App extends Component {
       },
     };
   }
-  personalDetailsChange = (e) => {};
+
+  personalDetailsChange = (e) => {
+    const key = e.target.getAttribute("data-key");
+    const obj = { ...this.state.personalDetails };
+    obj[key] = e.target.value;
+    this.setState({ personalDetails: obj });
+  };
 
   render() {
     const { personalDetails } = this.state;
     return (
       <div className="app">
         <form action="">
-          <PersonalDetails onChange={this.personalDetailsChange} />
+          <PersonalDetails
+            onChange={this.personalDetailsChange}
+            fullName={personalDetails.fullName}
+            email={personalDetails.email}
+            phoneNumber={personalDetails.phoneNumber}
+            address={personalDetails.address}
+          />
         </form>
         <Resume personalDetails={personalDetails} />
       </div>
