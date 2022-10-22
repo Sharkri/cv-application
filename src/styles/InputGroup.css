@@ -1,11 +1,14 @@
 input {
-  border: 1px solid #ddd;
-  padding: 8px;
-  border-radius: 6px;
+  border: 2px solid #eee;
+  padding: 10px;
+  border-radius: 12px;
+  transition: 0.25s;
 }
 
 input:focus {
-  outline: 1px solid #3b82f6;
+  border-color: rgb(59, 131, 246);
+  outline: none;
+  box-shadow: 0px 3px 15px rgba(59, 131, 246, 0.2);
 }
 
 .input-group {
