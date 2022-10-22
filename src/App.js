@@ -65,6 +65,11 @@ class App extends Component {
           email={email}
           phoneNumber={phoneNumber}
           address={address}
+          degree={degree}
+          schoolName={schoolName}
+          location={location}
+          startDate={startDate}
+          endDate={endDate}
         />
       </div>
     );

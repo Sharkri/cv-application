@@ -41,7 +41,7 @@ class EducationDetails extends Component {
           type="text"
           id="date"
           labelText="Start Date"
-          placeholder="Month, Year"
+          placeholder="Enter Start Date"
           value={startDate}
           onChange={onChange}
           data-key="startDate"
@@ -51,7 +51,7 @@ class EducationDetails extends Component {
           type="text"
           id="date"
           labelText="End Date"
-          placeholder="Month, Year"
+          placeholder="Enter End Date"
           value={endDate}
           onChange={onChange}
           data-key="endDate"
