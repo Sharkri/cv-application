@@ -8,47 +8,47 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      personalDetails: {
-        fullName: "",
-        email: "",
-        phoneNumber: "",
-        address: "",
-      },
-      educationDetails: {
-        degree: "",
-        schoolName: "",
-        city: "",
-        country: "",
-        startDate: "",
-        endDate: "",
-      },
+      fullName: "",
+      email: "",
+      phoneNumber: "",
+      address: "",
+
+      degree: "",
+      schoolName: "",
+      city: "",
+      country: "",
+      startDate: "",
+      endDate: "",
     };
   }
 
-  personalDetailsChange = (e) => {
+  handleChange = (e) => {
     const key = e.target.getAttribute("data-key");
-    const obj = { ...this.state.personalDetails };
-    obj[key] = e.target.value;
-    this.setState({ personalDetails: obj });
+    this.setState({ [key]: e.target.value });
   };
 
   render() {
-    const { personalDetails } = this.state;
+    const { fullName, email, phoneNumber, address } = this.state;
     return (
       <div className="app">
         <form action="">
           <h2>Personal Details</h2>
           <PersonalDetails
-            onChange={this.personalDetailsChange}
-            fullName={personalDetails.fullName}
-            email={personalDetails.email}
-            phoneNumber={personalDetails.phoneNumber}
-            address={personalDetails.address}
+            onChange={this.handleChange}
+            fullName={fullName}
+            email={email}
+            phoneNumber={phoneNumber}
+            address={address}
           />
           <h2>Education</h2>
           <EducationDetails />
         </form>
-        <Resume personalDetails={personalDetails} />
+        <Resume
+          fullName={fullName}
+          email={email}
+          phoneNumber={phoneNumber}
+          address={address}
+        />
       </div>
     );
   }

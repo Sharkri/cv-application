@@ -4,8 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 class Resume extends Component {
   render() {
-    const { fullName, email, phoneNumber, address } =
-      this.props.personalDetails;
+    const { fullName, email, phoneNumber, address } = this.props;
     return (
       <div className="resume">
         <div className="personal-info section">
