@@ -12,15 +12,15 @@ class Resume extends Component {
           <h2 className="resume-name">{fullName}</h2>
           <div className="contact-info">
             <div>
-              <i className="fa-solid fa-envelope" />
+              {email ? <i className="fa-solid fa-envelope" /> : null}
               {email}
             </div>
             <div>
-              <i className="fa-solid fa-phone" />
+              {phoneNumber ? <i className="fa-solid fa-phone" /> : null}
               {phoneNumber}
             </div>
             <div>
-              <i className="fa-solid fa-location-dot" />
+              {address ? <i className="fa-solid fa-location-dot" /> : null}
               {address}
             </div>
           </div>
