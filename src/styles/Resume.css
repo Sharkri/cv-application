@@ -1,12 +1,13 @@
 .resume {
   background-color: white;
   padding: 24px;
-  width: clamp(400px, 50vw, 800px);
+  width: clamp(400px, 60vw, 800px);
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 18px;
 }
 
@@ -14,8 +15,14 @@
   text-align: center;
 }
 
-.contact-info > * {
+.contact-info > div {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 6px;
+}
+
+.contact-info span {
+  overflow-wrap: anywhere;
 }
