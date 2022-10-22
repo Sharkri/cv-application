@@ -11,4 +11,6 @@ input:focus {
 .input-group {
   display: flex;
   flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
 }
