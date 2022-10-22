@@ -9,7 +9,7 @@ class PersonalDetails extends Component {
           type="text"
           id="full-name"
           labelText="Full name"
-          placeholder="Enter your first and last name"
+          placeholder="First and last name"
         />
 
         <InputGroup
