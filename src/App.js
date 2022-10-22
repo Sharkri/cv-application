@@ -15,8 +15,7 @@ class App extends Component {
 
       degree: "",
       schoolName: "",
-      city: "",
-      country: "",
+      location: "",
       startDate: "",
       endDate: "",
     };
@@ -28,7 +27,18 @@ class App extends Component {
   };
 
   render() {
-    const { fullName, email, phoneNumber, address } = this.state;
+    const {
+      fullName,
+      email,
+      phoneNumber,
+      address,
+      degree,
+      schoolName,
+      location,
+      startDate,
+      endDate,
+    } = this.state;
+
     return (
       <div className="app">
         <form action="">
@@ -41,7 +51,14 @@ class App extends Component {
             address={address}
           />
           <h2>Education</h2>
-          <EducationDetails />
+          <EducationDetails
+            onChange={this.handleChange}
+            degree={degree}
+            schoolName={schoolName}
+            location={location}
+            startDate={startDate}
+            endDate={endDate}
+          />
         </form>
         <Resume
           fullName={fullName}

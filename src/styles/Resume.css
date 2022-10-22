@@ -5,29 +5,3 @@
   max-width: 800px;
   overflow-wrap: anywhere;
 }
-
-header {
-  background-color: rgb(14, 55, 78);
-  width: 100%;
-  color: white;
-  padding: 24px;
-}
-
-.resume-name {
-  text-align: center;
-}
-
-.contact-info {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-.contact-info > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 6px;
-}
