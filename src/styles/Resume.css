@@ -2,3 +2,19 @@
   background-color: white;
   padding: 24px;
 }
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  gap: 18px;
+}
+
+.resume-name {
+  text-align: center;
+}
+
+.contact-info > * {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       personalDetails: {
         fullName: "",
-        email: "beans@beans.com",
+        email: "",
         phoneNumber: "",
         address: "",
       },
