@@ -6,7 +6,7 @@ class PersonalInfoSection extends Component {
     const { email, fullName, phoneNumber, address } = this.props;
     return (
       <div className="personal-info section">
-        <h2 className="resume-name">{fullName}</h2>
+        <h1 className="resume-name">{fullName}</h1>
         <div className="contact-info">
           <div>
             {email ? <i className="fa-solid fa-envelope" /> : null}
