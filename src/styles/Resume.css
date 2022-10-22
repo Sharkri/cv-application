@@ -1,7 +1,10 @@
 .resume {
   background-color: white;
   padding: 24px;
-  width: clamp(400px, 60vw, 800px);
+  flex-grow: 2;
+  min-width: 400px;
+  max-width: 800px;
+  overflow-wrap: anywhere;
 }
 
 .contact-info {
@@ -21,8 +24,4 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 6px;
-}
-
-.contact-info span {
-  overflow-wrap: anywhere;
 }
