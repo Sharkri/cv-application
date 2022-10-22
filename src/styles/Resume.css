@@ -1,10 +1,20 @@
 .resume {
   background-color: white;
-  padding: 24px;
   flex-grow: 2;
   min-width: 400px;
   max-width: 800px;
   overflow-wrap: anywhere;
+}
+
+header {
+  background-color: rgb(14, 55, 78);
+  width: 100%;
+  color: white;
+  padding: 24px;
+}
+
+.resume-name {
+  text-align: center;
 }
 
 .contact-info {
@@ -12,10 +22,6 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 18px;
-}
-
-.resume-name {
-  text-align: center;
 }
 
 .contact-info > div {

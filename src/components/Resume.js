@@ -7,7 +7,7 @@ class Resume extends Component {
     const { fullName, email, phoneNumber, address } = this.props;
     return (
       <div className="resume">
-        <div className="personal-info section">
+        <header className="personal-info section">
           <h2 className="resume-name">{fullName}</h2>
           <div className="contact-info">
             <div>
@@ -23,7 +23,7 @@ class Resume extends Component {
               <span>{address}</span>
             </div>
           </div>
-        </div>
+        </header>
       </div>
     );
   }
