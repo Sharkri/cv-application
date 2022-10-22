@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/inputs.css";
+import "../styles/InputGroup.css";
 class InputGroup extends Component {
   constructor(props) {
     super(props);
