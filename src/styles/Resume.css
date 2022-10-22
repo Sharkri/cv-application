@@ -1,11 +1,12 @@
 .resume {
   background-color: white;
   padding: 24px;
+  width: clamp(400px, 50vw, 800px);
 }
 
 .contact-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 18px;
 }
 

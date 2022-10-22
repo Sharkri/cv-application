@@ -14,3 +14,9 @@ body {
   --main-bg-color: #f3f4f6;
   background-color: var(--main-bg-color);
 }
+
+h1,
+h2,
+h3 {
+  margin-bottom: 12px;
+}
