@@ -31,7 +31,7 @@ class EducationDetails extends Component {
           type="text"
           id="location"
           labelText="Location"
-          placeholder="City, Country"
+          placeholder="Enter Location"
           value={location}
           onChange={onChange}
           data-key="location"
