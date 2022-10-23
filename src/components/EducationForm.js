@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import InputGroup from "./InputGroup";
 
-class EducationInputs extends Component {
+class EducationForm extends Component {
   render() {
     const { onChange, degree, schoolName, location, startDate, endDate, id } =
       this.props;
     return (
-      <div className="education-inputs" id={id}>
+      <div className="education-form" id={id}>
         <InputGroup
           type="text"
           id="school-name"
@@ -60,4 +60,4 @@ class EducationInputs extends Component {
   }
 }
 
-export default EducationInputs;
+export default EducationForm;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.css";
 import PersonalDetails from "./components/PersonalDetails";
-import EducationInputs from "./components/EducationInputs";
+import EducationForm from "./components/EducationForm";
 import Resume from "./components/Resume";
 import uniqid from "uniqid";
 
@@ -40,16 +40,14 @@ class App extends Component {
     return (
       <div className="app">
         <form action="">
-          <div className="personal-details-inputs container">
-            <h2>Personal Details</h2>
-            <PersonalDetails
-              onChange={this.handleChange}
-              fullName={fullName}
-              email={email}
-              phoneNumber={phoneNumber}
-              address={address}
-            />
-          </div>
+          <PersonalDetails
+            onChange={this.handleChange}
+            fullName={fullName}
+            email={email}
+            phoneNumber={phoneNumber}
+            address={address}
+          />
+
           <div className="add-education-section container closed">
             <button
               className="expand-add-education-section"
@@ -69,7 +67,7 @@ class App extends Component {
             <div className="main-education-content closed toggle">
               <div className="education-input-forms">
                 {educations.map((education) => (
-                  <EducationInputs
+                  <EducationForm
                     onChange={this.handleEducationChange}
                     degree={education.degree}
                     schoolName={education.schoolName}

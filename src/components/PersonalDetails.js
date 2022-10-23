@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import InputGroup from "./InputGroup";
+import "../styles/PersonalDetails.css";
 
 class PersonalDetails extends Component {
   render() {
     const { onChange, email, fullName, phoneNumber, address } = this.props;
     return (
       <div className="personal-details">
+        <h2>Personal Details</h2>
         <InputGroup
           type="text"
           id="full-name"
@@ -15,7 +17,6 @@ class PersonalDetails extends Component {
           onChange={onChange}
           data-key="fullName"
         />
-
         <InputGroup
           type="email"
           id="email"
@@ -26,7 +27,6 @@ class PersonalDetails extends Component {
           data-key="email"
           recommended
         />
-
         <InputGroup
           type="tel"
           id="phone-number"
@@ -37,7 +37,6 @@ class PersonalDetails extends Component {
           data-key="phoneNumber"
           recommended
         />
-
         <InputGroup
           type="text"
           id="address"
