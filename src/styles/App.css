@@ -42,6 +42,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 18px;
 }
 
 .education-details-header {
@@ -56,7 +57,7 @@ form {
 }
 
 .chevron.closed {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .add-education {
@@ -69,4 +70,8 @@ form {
 
 .add-education i {
   margin-right: 8px;
+}
+
+.add-education.closed {
+  visibility: hidden;
 }
