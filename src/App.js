@@ -56,9 +56,12 @@ class App extends Component {
             <button
               className="expand-education-details"
               type="button"
-              onClick={(e) => {
+              onClick={() => {
                 const toggleElems = document.querySelectorAll(".toggle");
                 toggleElems.forEach((elem) => elem.classList.toggle("closed"));
+                const educationInputs =
+                  document.querySelector(".education-inputs");
+                educationInputs.classList.add("closed");
               }}
             >
               <h2 className="education-details-header">
@@ -67,13 +70,8 @@ class App extends Component {
               </h2>
               <i className="fa-solid fa-chevron-up chevron closed toggle"></i>
             </button>
-            <button className="add-education" type="button">
-              <h4>
-                <i className="fa-solid fa-plus" />
-                Education
-              </h4>
-            </button>
-            <div className="education-inputs" style={{ visibility: "hidden" }}>
+
+            <div className="education-inputs closed toggle">
               <EducationDetails
                 onChange={this.handleChange}
                 degree={degree}
@@ -83,6 +81,21 @@ class App extends Component {
                 endDate={endDate}
               />
             </div>
+
+            <button
+              className="add-education closed toggle"
+              type="button"
+              onClick={(e) => {
+                const educationInputs =
+                  document.querySelector(".education-inputs");
+                educationInputs.classList.remove("closed");
+              }}
+            >
+              <h4>
+                <i className="fa-solid fa-plus" />
+                Education
+              </h4>
+            </button>
           </div>
         </form>
         <Resume
