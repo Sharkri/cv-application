@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.css";
 import PersonalDetails from "./components/PersonalDetails";
-import EducationDetails from "./components/EducationDetails";
+import EducationInputs from "./components/EducationInputs";
 import Resume from "./components/Resume";
 import uniqid from "uniqid";
 
@@ -25,7 +25,7 @@ class App extends Component {
 
   handleEducationChange = (e) => {
     const key = e.target.getAttribute("data-key");
-    const id = e.target.closest(".education-details").id;
+    const id = e.target.closest(".education-inputs").id;
     const { educations } = this.state;
     const modified = educations.map((education) => {
       if (education.id === id) education[key] = e.target.value;
@@ -50,25 +50,25 @@ class App extends Component {
               address={address}
             />
           </div>
-          <div className="education-details-container container">
+          <div className="add-education-section container">
             <button
-              className="expand-education-details"
+              className="expand-add-education-section"
               type="button"
               onClick={() => {
                 const toggleElems = document.querySelectorAll(".toggle");
                 toggleElems.forEach((elem) => elem.classList.toggle("closed"));
               }}
             >
-              <h2 className="education-details-header">
+              <h2 className="add-education-header">
                 <i className="fa-solid fa-graduation-cap" />
                 Education
               </h2>
               <i className="fa-solid fa-chevron-up chevron closed toggle"></i>
             </button>
 
-            <div className="education-inputs closed toggle">
+            <div className="education-input-forms closed toggle">
               {educations.map((education) => (
-                <EducationDetails
+                <EducationInputs
                   onChange={this.handleEducationChange}
                   degree={education.degree}
                   schoolName={education.schoolName}
@@ -82,9 +82,9 @@ class App extends Component {
             </div>
 
             <button
-              className="add-education closed toggle"
+              className="create-education-form closed toggle"
               type="button"
-              onClick={(e) => {
+              onClick={() => {
                 const object = {
                   degree: "",
                   schoolName: "",
@@ -98,13 +98,14 @@ class App extends Component {
                 });
               }}
             >
-              <h4>
+              <h4 className="button-content">
                 <i className="fa-solid fa-plus" />
                 Education
               </h4>
             </button>
           </div>
         </form>
+
         <Resume
           fullName={fullName}
           email={email}

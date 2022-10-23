@@ -28,7 +28,7 @@ form {
   visibility: hidden;
 }
 
-.expand-education-details {
+.expand-add-education-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,14 +38,13 @@ form {
   padding: 24px;
 }
 
-.education-details-container {
+.add-education-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 18px;
 }
 
-.education-details-header {
+.add-education-header {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -60,7 +59,7 @@ form {
   transform: rotate(-180deg);
 }
 
-.add-education {
+.create-education-form {
   background-color: transparent;
   padding: 8px 18px;
   border-radius: 69420px;
@@ -68,10 +67,10 @@ form {
   font-family: "NotoSans-SemiBold";
 }
 
-.add-education i {
+.create-education-form i {
   margin-right: 8px;
 }
 
-.add-education.closed {
-  visibility: hidden;
+.create-education-form.closed {
+  display: none;
 }
