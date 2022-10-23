@@ -1,9 +1,9 @@
 .resume {
   background-color: white;
-  flex-grow: 2;
-  min-width: 400px;
-  max-width: 800px;
+  width: 21cm;
+  height: 29.7cm;
   overflow-wrap: anywhere;
+  position: sticky;
 }
 
 .section {
