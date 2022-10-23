@@ -2,3 +2,7 @@
   display: flex;
   gap: 48px;
 }
+
+.main-info-schoolName {
+  font-family: "NotoSans-bold";
+}

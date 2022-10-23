@@ -9,21 +9,21 @@ class EducationDetails extends Component {
       <div className="education-details">
         <InputGroup
           type="text"
-          id="degree"
-          labelText="Degree"
-          placeholder="Enter Degree / Field Of Study"
-          value={degree}
-          onChange={onChange}
-          data-key="degree"
-        />
-        <InputGroup
-          type="text"
           id="school-name"
           labelText="School"
           placeholder="Enter school / university"
           value={schoolName}
           onChange={onChange}
           data-key="schoolName"
+        />
+        <InputGroup
+          type="text"
+          id="degree"
+          labelText="Degree"
+          placeholder="Enter Degree / Field Of Study"
+          value={degree}
+          onChange={onChange}
+          data-key="degree"
         />
         <InputGroup
           type="text"
@@ -35,7 +35,6 @@ class EducationDetails extends Component {
           data-key="location"
           optional
         />
-
         <div className="education-dates">
           <InputGroup
             type="text"

@@ -22,11 +22,8 @@ class EducationInfoSection extends Component {
           </div>
 
           <div className="container-group">
-            <p>
-              <strong>{degree}</strong>
-            </p>
-
-            <p>{schoolName}</p>
+            <p className="main-info-schoolName">{schoolName}</p>
+            <p>{degree}</p>
           </div>
         </div>
       </div>
