@@ -16,7 +16,6 @@ class EducationDetails extends Component {
           onChange={onChange}
           data-key="degree"
         />
-
         <InputGroup
           type="text"
           id="school-name"
@@ -26,7 +25,6 @@ class EducationDetails extends Component {
           onChange={onChange}
           data-key="schoolName"
         />
-
         <InputGroup
           type="text"
           id="location"
@@ -35,6 +33,7 @@ class EducationDetails extends Component {
           value={location}
           onChange={onChange}
           data-key="location"
+          optional
         />
 
         <div className="education-dates">

@@ -13,12 +13,16 @@ class InputGroup extends Component {
       labelText,
       onChange,
       value,
+      optional,
       "data-key": dataKey,
     } = this.props;
 
     return (
       <div className="input-group">
-        <label htmlFor={id}>{labelText}</label>
+        <label htmlFor={id}>
+          <span className="label-text">{labelText}</span>
+          {optional ? <span className="optional-text">optional</span> : null}
+        </label>
         <input
           type={type}
           id={id}

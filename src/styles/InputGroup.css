@@ -22,3 +22,9 @@ input:focus {
   display: flex;
   gap: 8px;
 }
+
+.optional-text {
+  margin-left: 8px;
+  color: grey;
+  font-size: 11px;
+}
