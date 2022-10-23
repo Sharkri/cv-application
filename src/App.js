@@ -53,15 +53,22 @@ class App extends Component {
             />
           </div>
           <div className="education-details-container container">
-            <button className="expand-education-details" type="button">
+            <button
+              className="expand-education-details"
+              type="button"
+              onClick={(e) => {
+                const toggleElems = document.querySelectorAll(".toggle");
+                toggleElems.forEach((elem) => elem.classList.toggle("closed"));
+              }}
+            >
               <h2 className="education-details-header">
                 <i className="fa-solid fa-graduation-cap" />
                 Education
               </h2>
-              <i class="fa-solid fa-chevron-down"></i>
+              <i className="fa-solid fa-chevron-down chevron closed toggle"></i>
             </button>
 
-            <div className="education-inputs closed">
+            <div className="education-inputs closed toggle">
               <EducationDetails
                 onChange={this.handleChange}
                 degree={degree}

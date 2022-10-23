@@ -24,7 +24,8 @@ form {
 }
 
 .education-inputs.closed {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .expand-education-details {
@@ -42,4 +43,12 @@ form {
   align-items: center;
   gap: 12px;
   margin: 0;
+}
+
+.chevron {
+  transition: transform 0.3s;
+}
+
+.chevron.closed {
+  transform: rotate(180deg);
 }
