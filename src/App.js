@@ -50,7 +50,7 @@ class App extends Component {
               address={address}
             />
           </div>
-          <div className="add-education-section container">
+          <div className="add-education-section container closed">
             <button
               className="expand-add-education-section"
               type="button"
@@ -66,43 +66,44 @@ class App extends Component {
               <i className="fa-solid fa-chevron-up chevron closed toggle"></i>
             </button>
 
-            <div className="education-input-forms closed toggle">
-              {educations.map((education) => (
-                <EducationInputs
-                  onChange={this.handleEducationChange}
-                  degree={education.degree}
-                  schoolName={education.schoolName}
-                  location={education.location}
-                  startDate={education.startDate}
-                  endDate={education.endDate}
-                  key={education.id}
-                  id={education.id}
-                />
-              ))}
+            <div className="main-education-content closed toggle">
+              <div className="education-input-forms">
+                {educations.map((education) => (
+                  <EducationInputs
+                    onChange={this.handleEducationChange}
+                    degree={education.degree}
+                    schoolName={education.schoolName}
+                    location={education.location}
+                    startDate={education.startDate}
+                    endDate={education.endDate}
+                    key={education.id}
+                    id={education.id}
+                  />
+                ))}
+              </div>
+              <button
+                className="create-education-form"
+                type="button"
+                onClick={() => {
+                  const object = {
+                    degree: "",
+                    schoolName: "",
+                    location: "",
+                    startDate: "",
+                    endDate: "",
+                    id: uniqid(),
+                  };
+                  this.setState({
+                    educations: [...educations, object],
+                  });
+                }}
+              >
+                <h4 className="button-content">
+                  <i className="fa-solid fa-plus" />
+                  Education
+                </h4>
+              </button>
             </div>
-
-            <button
-              className="create-education-form closed toggle"
-              type="button"
-              onClick={() => {
-                const object = {
-                  degree: "",
-                  schoolName: "",
-                  location: "",
-                  startDate: "",
-                  endDate: "",
-                  id: uniqid(),
-                };
-                this.setState({
-                  educations: [...educations, object],
-                });
-              }}
-            >
-              <h4 className="button-content">
-                <i className="fa-solid fa-plus" />
-                Education
-              </h4>
-            </button>
           </div>
         </form>
 

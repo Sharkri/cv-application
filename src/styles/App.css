@@ -23,11 +23,6 @@ form {
   border-radius: 12px;
 }
 
-.education-inputs.closed {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .expand-add-education-section {
   display: flex;
   align-items: center;
@@ -36,6 +31,10 @@ form {
   border: none;
   background-color: transparent;
   padding: 24px;
+}
+
+.main-education-content.closed {
+  display: none;
 }
 
 .add-education-section {
@@ -70,8 +69,4 @@ form {
 
 .create-education-form i {
   margin-right: 8px;
-}
-
-.create-education-form.closed {
-  display: none;
 }
