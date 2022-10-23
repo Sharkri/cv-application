@@ -38,6 +38,12 @@ form {
   padding: 24px;
 }
 
+.education-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .education-details-header {
   display: flex;
   align-items: center;
@@ -51,4 +57,16 @@ form {
 
 .chevron.closed {
   transform: rotate(180deg);
+}
+
+.add-education {
+  background-color: transparent;
+  padding: 8px 18px;
+  border-radius: 69420px;
+  border: 4px solid rgb(238, 240, 244);
+  font-family: "NotoSans-SemiBold";
+}
+
+.add-education i {
+  margin-right: 8px;
 }

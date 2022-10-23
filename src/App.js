@@ -65,10 +65,15 @@ class App extends Component {
                 <i className="fa-solid fa-graduation-cap" />
                 Education
               </h2>
-              <i className="fa-solid fa-chevron-down chevron closed toggle"></i>
+              <i className="fa-solid fa-chevron-up chevron closed toggle"></i>
             </button>
-
-            <div className="education-inputs closed toggle">
+            <button className="add-education" type="button">
+              <h4>
+                <i className="fa-solid fa-plus" />
+                Education
+              </h4>
+            </button>
+            <div className="education-inputs" style={{ visibility: "hidden" }}>
               <EducationDetails
                 onChange={this.handleChange}
                 degree={degree}
