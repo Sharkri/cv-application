@@ -23,7 +23,16 @@ class App extends Component {
     this.setState({ [key]: e.target.value });
   };
 
-  handleEducationChange = (e) => {};
+  handleEducationChange = (e) => {
+    const key = e.target.getAttribute("data-key");
+    const id = e.target.closest(".education-details").id;
+    const { educations } = this.state;
+    const modified = educations.map((education) => {
+      if (education.id === id) education[key] = e.target.value;
+      return education;
+    });
+    this.setState({ educations: modified });
+  };
 
   render() {
     const { fullName, email, phoneNumber, address, educations } = this.state;
@@ -67,6 +76,7 @@ class App extends Component {
                   startDate={education.startDate}
                   endDate={education.endDate}
                   key={education.id}
+                  id={education.id}
                 />
               ))}
             </div>

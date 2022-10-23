@@ -3,10 +3,10 @@ import InputGroup from "./InputGroup";
 
 class EducationDetails extends Component {
   render() {
-    const { onChange, degree, schoolName, location, startDate, endDate } =
+    const { onChange, degree, schoolName, location, startDate, endDate, id } =
       this.props;
     return (
-      <div className="education-details">
+      <div className="education-details" id={id}>
         <InputGroup
           type="text"
           id="school-name"
