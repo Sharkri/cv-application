@@ -1,12 +1,12 @@
-.main-info {
+.education-info {
   display: flex;
   gap: 48px;
 }
 
-.main-info-schoolName {
+.education-info-schoolName {
   font-family: "NotoSans-bold";
 }
 
-.main-info-degree {
+.education-info-degree {
   font-size: 15px;
 }
