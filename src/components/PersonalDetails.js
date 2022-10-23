@@ -24,6 +24,7 @@ class PersonalDetails extends Component {
           value={email}
           onChange={onChange}
           data-key="email"
+          recommended
         />
 
         <InputGroup
@@ -34,6 +35,7 @@ class PersonalDetails extends Component {
           value={phoneNumber}
           onChange={onChange}
           data-key="phoneNumber"
+          recommended
         />
 
         <InputGroup
@@ -44,6 +46,7 @@ class PersonalDetails extends Component {
           value={address}
           onChange={onChange}
           data-key="address"
+          recommended
         />
       </div>
     );
