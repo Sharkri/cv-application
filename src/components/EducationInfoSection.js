@@ -8,9 +8,7 @@ class EducationInfoSection extends Component {
     return (
       <div className="education-info-section section">
         <br />
-        {Object.values(this.props).some((prop) => prop) ? (
-          <h3 className="header-text">Education</h3>
-        ) : null}
+        {educations.length ? <h3 className="header-text">Education</h3> : null}
 
         {educations.map((education) => (
           <EducationInfo
