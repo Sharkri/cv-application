@@ -17,3 +17,8 @@ input:focus {
   gap: 6px;
   margin-bottom: 12px;
 }
+
+.education-dates {
+  display: flex;
+  gap: 8px;
+}

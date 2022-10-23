@@ -5,6 +5,8 @@ class EducationInfoSection extends Component {
     const { degree, schoolName, location, startDate, endDate } = this.props;
     return (
       <div className="education-info section">
+        <br />
+        <h3 className="header-text">Education</h3>
         <p>{degree}</p>
         <p>{schoolName}</p>
         <p>{location}</p>

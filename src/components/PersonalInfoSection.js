@@ -5,7 +5,7 @@ class PersonalInfoSection extends Component {
   render() {
     const { email, fullName, phoneNumber, address } = this.props;
     return (
-      <div className="personal-info section">
+      <div className="personal-info">
         <h1 className="resume-name">{fullName}</h1>
         <div className="contact-info">
           <div>

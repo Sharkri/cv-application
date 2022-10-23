@@ -1,5 +1,5 @@
 .personal-info {
-  background-color: rgb(14, 55, 78);
+  background-color: var(--main-resume-color);
   width: 100%;
   color: white;
   padding: 36px 24px;

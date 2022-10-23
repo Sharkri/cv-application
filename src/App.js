@@ -50,7 +50,9 @@ class App extends Component {
             phoneNumber={phoneNumber}
             address={address}
           />
+
           <h2>Education</h2>
+
           <EducationDetails
             onChange={this.handleChange}
             degree={degree}

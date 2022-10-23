@@ -37,25 +37,26 @@ class EducationDetails extends Component {
           data-key="location"
         />
 
-        <InputGroup
-          type="text"
-          id="date"
-          labelText="Start Date"
-          placeholder="Enter Start Date"
-          value={startDate}
-          onChange={onChange}
-          data-key="startDate"
-        />
-
-        <InputGroup
-          type="text"
-          id="date"
-          labelText="End Date"
-          placeholder="Enter End Date"
-          value={endDate}
-          onChange={onChange}
-          data-key="endDate"
-        />
+        <div className="education-dates">
+          <InputGroup
+            type="text"
+            id="date"
+            labelText="Start Date"
+            placeholder="Enter Start Date"
+            value={startDate}
+            onChange={onChange}
+            data-key="startDate"
+          />
+          <InputGroup
+            type="text"
+            id="date"
+            labelText="End Date"
+            placeholder="Enter End Date"
+            value={endDate}
+            onChange={onChange}
+            data-key="endDate"
+          />
+        </div>
       </div>
     );
   }

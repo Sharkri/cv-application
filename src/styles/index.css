@@ -12,6 +12,7 @@
 
 body {
   --main-bg-color: #f3f4f6;
+  --main-resume-color: rgb(14, 55, 78);
   background-color: var(--main-bg-color);
 }
 
