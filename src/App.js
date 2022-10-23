@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.css";
 import PersonalDetails from "./components/PersonalDetails";
-import EducationForm from "./components/EducationForm";
+import EducationForms from "./components/EducationForms";
 import Resume from "./components/Resume";
 import uniqid from "uniqid";
 
@@ -25,7 +25,7 @@ class App extends Component {
 
   handleEducationChange = (e) => {
     const key = e.target.getAttribute("data-key");
-    const id = e.target.closest(".education-inputs").id;
+    const id = e.target.closest(".education-form").id;
     const { educations } = this.state;
     const modified = educations.map((education) => {
       if (education.id === id) education[key] = e.target.value;
@@ -65,20 +65,10 @@ class App extends Component {
             </button>
 
             <div className="main-education-content closed toggle">
-              <div className="education-input-forms">
-                {educations.map((education) => (
-                  <EducationForm
-                    onChange={this.handleEducationChange}
-                    degree={education.degree}
-                    schoolName={education.schoolName}
-                    location={education.location}
-                    startDate={education.startDate}
-                    endDate={education.endDate}
-                    key={education.id}
-                    id={education.id}
-                  />
-                ))}
-              </div>
+              <EducationForms
+                educations={educations}
+                onChange={this.handleEducationChange}
+              />
               <button
                 className="create-education-form"
                 type="button"
