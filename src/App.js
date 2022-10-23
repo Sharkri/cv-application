@@ -13,11 +13,6 @@ class App extends Component {
       phoneNumber: "",
       address: "",
 
-      // degree: "",
-      // schoolName: "",
-      // location: "",
-      // startDate: "",
-      // endDate: "",
       educations: [],
     };
   }
@@ -65,23 +60,32 @@ class App extends Component {
             </button>
 
             <div className="education-inputs closed toggle">
-              <EducationDetails
-                onChange={this.handleEducationChange}
-                // degree={degree}
-                // schoolName={schoolName}
-                // location={location}
-                // startDate={startDate}
-                // endDate={endDate}
-              />
+              {educations.map((education) => (
+                <EducationDetails
+                  onChange={this.handleEducationChange}
+                  degree={education.degree}
+                  schoolName={education.schoolName}
+                  location={education.location}
+                  startDate={education.startDate}
+                  endDate={education.endDate}
+                />
+              ))}
             </div>
 
             <button
               className="add-education closed toggle"
               type="button"
               onClick={(e) => {
-                const educationInputs =
-                  document.querySelector(".education-inputs");
-                educationInputs.classList.remove("closed");
+                const object = {
+                  degree: "",
+                  schoolName: "",
+                  location: "",
+                  startDate: "",
+                  endDate: "",
+                };
+                this.setState({
+                  educations: [...educations, object],
+                });
               }}
             >
               <h4>
@@ -97,11 +101,6 @@ class App extends Component {
           phoneNumber={phoneNumber}
           address={address}
           educations={educations}
-          // degree={degree}
-          // schoolName={schoolName}
-          // location={location}
-          // startDate={startDate}
-          // endDate={endDate}
         />
       </div>
     );
