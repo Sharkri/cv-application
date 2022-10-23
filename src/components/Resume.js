@@ -23,6 +23,7 @@ class Resume extends Component {
             location={education.location}
             startDate={education.startDate}
             endDate={education.endDate}
+            key={education.id}
           />
         ))}
       </div>

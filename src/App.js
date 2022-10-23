@@ -3,6 +3,7 @@ import "./styles/App.css";
 import PersonalDetails from "./components/PersonalDetails";
 import EducationDetails from "./components/EducationDetails";
 import Resume from "./components/Resume";
+import uniqid from "uniqid";
 
 class App extends Component {
   constructor(props) {
@@ -47,9 +48,6 @@ class App extends Component {
               onClick={() => {
                 const toggleElems = document.querySelectorAll(".toggle");
                 toggleElems.forEach((elem) => elem.classList.toggle("closed"));
-                const educationInputs =
-                  document.querySelector(".education-inputs");
-                educationInputs.classList.add("closed");
               }}
             >
               <h2 className="education-details-header">
@@ -68,6 +66,7 @@ class App extends Component {
                   location={education.location}
                   startDate={education.startDate}
                   endDate={education.endDate}
+                  key={education.id}
                 />
               ))}
             </div>
@@ -82,6 +81,7 @@ class App extends Component {
                   location: "",
                   startDate: "",
                   endDate: "",
+                  id: uniqid(),
                 };
                 this.setState({
                   educations: [...educations, object],
