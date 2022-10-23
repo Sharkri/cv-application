@@ -23,8 +23,12 @@ input:focus {
   gap: 8px;
 }
 
+label > * {
+  font-family: "NotoSans-SemiBold";
+}
+
 .optional-text {
   margin-left: 8px;
-  color: grey;
-  font-size: 11px;
+  color: rgb(156, 163, 175);
+  font-size: 10.5px;
 }

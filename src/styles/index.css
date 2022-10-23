@@ -1,13 +1,23 @@
 @font-face {
-  font-family: "Noto Sans";
+  font-family: "NotoSans";
   src: url(../fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "NotoSans-Bold";
+  src: url(../fonts/NotoSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "NotoSans-SemiBold";
+  src: url(../fonts/NotoSans-SemiBold.ttf);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans";
+  font-family: "NotoSans", sans-serif;
 }
 
 body {
@@ -20,4 +30,5 @@ h1,
 h2,
 h3 {
   margin-bottom: 14px;
+  font-family: "NotoSans-bold";
 }
