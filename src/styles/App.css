@@ -7,8 +7,39 @@
 }
 
 form {
-  background-color: white;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   max-width: 500px;
+  gap: 12px;
+}
+
+.personal-details-inputs {
+  padding: 18px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 12px;
+}
+
+.education-inputs.closed {
+  display: none;
+}
+
+.expand-education-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 24px;
+}
+
+.education-details-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
 }

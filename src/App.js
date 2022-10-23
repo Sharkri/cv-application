@@ -42,25 +42,36 @@ class App extends Component {
     return (
       <div className="app">
         <form action="">
-          <h2>Personal Details</h2>
-          <PersonalDetails
-            onChange={this.handleChange}
-            fullName={fullName}
-            email={email}
-            phoneNumber={phoneNumber}
-            address={address}
-          />
+          <div className="personal-details-inputs container">
+            <h2>Personal Details</h2>
+            <PersonalDetails
+              onChange={this.handleChange}
+              fullName={fullName}
+              email={email}
+              phoneNumber={phoneNumber}
+              address={address}
+            />
+          </div>
+          <div className="education-details-container container">
+            <button className="expand-education-details" type="button">
+              <h2 className="education-details-header">
+                <i className="fa-solid fa-graduation-cap" />
+                Education
+              </h2>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
 
-          <h2>Education</h2>
-
-          <EducationDetails
-            onChange={this.handleChange}
-            degree={degree}
-            schoolName={schoolName}
-            location={location}
-            startDate={startDate}
-            endDate={endDate}
-          />
+            <div className="education-inputs closed">
+              <EducationDetails
+                onChange={this.handleChange}
+                degree={degree}
+                schoolName={schoolName}
+                location={location}
+                startDate={startDate}
+                endDate={endDate}
+              />
+            </div>
+          </div>
         </form>
         <Resume
           fullName={fullName}
