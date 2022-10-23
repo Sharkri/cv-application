@@ -6,17 +6,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 class Resume extends Component {
   render() {
-    const {
-      fullName,
-      email,
-      phoneNumber,
-      address,
-      degree,
-      schoolName,
-      location,
-      startDate,
-      endDate,
-    } = this.props;
+    const { fullName, email, phoneNumber, address, educations } = this.props;
+
     return (
       <div className="resume">
         <PersonalInfoSection
@@ -25,13 +16,15 @@ class Resume extends Component {
           phoneNumber={phoneNumber}
           address={address}
         />
-        <EducationInfoSection
-          degree={degree}
-          schoolName={schoolName}
-          location={location}
-          startDate={startDate}
-          endDate={endDate}
-        />
+        {educations.map((education) => (
+          <EducationInfoSection
+            degree={education.degree}
+            schoolName={education.schoolName}
+            location={education.location}
+            startDate={education.startDate}
+            endDate={education.endDate}
+          />
+        ))}
       </div>
     );
   }

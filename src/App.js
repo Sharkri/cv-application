@@ -13,11 +13,12 @@ class App extends Component {
       phoneNumber: "",
       address: "",
 
-      degree: "",
-      schoolName: "",
-      location: "",
-      startDate: "",
-      endDate: "",
+      // degree: "",
+      // schoolName: "",
+      // location: "",
+      // startDate: "",
+      // endDate: "",
+      educations: [],
     };
   }
 
@@ -26,18 +27,10 @@ class App extends Component {
     this.setState({ [key]: e.target.value });
   };
 
+  handleEducationChange = (e) => {};
+
   render() {
-    const {
-      fullName,
-      email,
-      phoneNumber,
-      address,
-      degree,
-      schoolName,
-      location,
-      startDate,
-      endDate,
-    } = this.state;
+    const { fullName, email, phoneNumber, address, educations } = this.state;
 
     return (
       <div className="app">
@@ -73,12 +66,12 @@ class App extends Component {
 
             <div className="education-inputs closed toggle">
               <EducationDetails
-                onChange={this.handleChange}
-                degree={degree}
-                schoolName={schoolName}
-                location={location}
-                startDate={startDate}
-                endDate={endDate}
+                onChange={this.handleEducationChange}
+                // degree={degree}
+                // schoolName={schoolName}
+                // location={location}
+                // startDate={startDate}
+                // endDate={endDate}
               />
             </div>
 
@@ -103,11 +96,12 @@ class App extends Component {
           email={email}
           phoneNumber={phoneNumber}
           address={address}
-          degree={degree}
-          schoolName={schoolName}
-          location={location}
-          startDate={startDate}
-          endDate={endDate}
+          educations={educations}
+          // degree={degree}
+          // schoolName={schoolName}
+          // location={location}
+          // startDate={startDate}
+          // endDate={endDate}
         />
       </div>
     );
