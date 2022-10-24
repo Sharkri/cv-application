@@ -5,7 +5,7 @@ class EducationForms extends Component {
   render() {
     const { educations, onChange } = this.props;
     return (
-      <div className="education-forms">
+      <div className="education-forms-container">
         {educations.map((education) => (
           <EducationForm
             onChange={onChange}
