@@ -50,6 +50,13 @@ class App extends Component {
     });
   };
 
+  toggleEducationClosed = () => {
+    const { isEducationClosed } = this.state;
+    this.setState({
+      isEducationClosed: isEducationClosed ? "" : "closed",
+    });
+  };
+
   render() {
     const { fullName, email, phoneNumber, address, educations } = this.state;
 
@@ -68,12 +75,7 @@ class App extends Component {
             <button
               className="expand-add-education-section"
               type="button"
-              onClick={() => {
-                const { isEducationClosed } = this.state;
-                this.setState({
-                  isEducationClosed: isEducationClosed ? "" : "closed",
-                });
-              }}
+              onClick={this.toggleEducationClosed}
             >
               <h2 className="add-education-header">
                 <i className="fa-solid fa-graduation-cap" />
