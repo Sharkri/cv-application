@@ -1,0 +1,47 @@
+.add-education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.add-education-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.expand-add-education-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 24px;
+}
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-content.closed {
+  display: none;
+}
+
+.create-education-form {
+  background-color: transparent;
+  padding: 8px 18px;
+  border-radius: 69420px;
+  border: 4px solid rgb(238, 240, 244);
+  font-family: "NotoSans-SemiBold";
+  margin-bottom: 18px;
+}
+
+.create-education-form i {
+  margin-right: 8px;
+}

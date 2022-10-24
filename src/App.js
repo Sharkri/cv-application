@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.css";
 import PersonalDetails from "./components/PersonalDetails";
-import EducationForms from "./components/EducationForms";
+import AddEducationSection from "./components/AddEducationSection";
 import Resume from "./components/Resume";
 import uniqid from "uniqid";
 
@@ -58,7 +58,14 @@ class App extends Component {
   };
 
   render() {
-    const { fullName, email, phoneNumber, address, educations } = this.state;
+    const {
+      fullName,
+      email,
+      phoneNumber,
+      address,
+      educations,
+      isEducationClosed,
+    } = this.state;
 
     return (
       <div className="app">
@@ -71,41 +78,13 @@ class App extends Component {
             address={address}
           />
 
-          <div className="add-education-section">
-            <button
-              className="expand-add-education-section"
-              type="button"
-              onClick={this.toggleEducationClosed}
-            >
-              <h2 className="add-education-header">
-                <i className="fa-solid fa-graduation-cap" />
-                Education
-              </h2>
-              <i
-                className={`fa-solid fa-chevron-up chevron ${this.state.isEducationClosed}`}
-              />
-            </button>
-
-            <div
-              className={`main-education-content ${this.state.isEducationClosed}`}
-            >
-              <EducationForms
-                educations={educations}
-                onChange={this.handleEducationChange}
-              />
-
-              <button
-                className="create-education-form"
-                type="button"
-                onClick={this.createEducationForm}
-              >
-                <h4 className="button-content">
-                  <i className="fa-solid fa-plus" />
-                  Education
-                </h4>
-              </button>
-            </div>
-          </div>
+          <AddEducationSection
+            educations={educations}
+            isClosed={isEducationClosed}
+            onChange={this.handleEducationChange}
+            createForm={this.createEducationForm}
+            toggleClosed={this.toggleEducationClosed}
+          />
         </form>
 
         <Resume
