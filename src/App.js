@@ -63,7 +63,7 @@ class App extends Component {
             address={address}
           />
 
-          <div className="add-education-section container closed">
+          <div className="add-education-section closed">
             <button
               className="expand-add-education-section"
               type="button"
@@ -76,7 +76,7 @@ class App extends Component {
                 <i className="fa-solid fa-graduation-cap" />
                 Education
               </h2>
-              <i className="fa-solid fa-chevron-up chevron closed toggle"></i>
+              <i className="fa-solid fa-chevron-up chevron closed toggle" />
             </button>
 
             <div className="main-education-content closed toggle">
@@ -84,6 +84,7 @@ class App extends Component {
                 educations={educations}
                 onChange={this.handleEducationChange}
               />
+
               <button
                 className="create-education-form"
                 type="button"
