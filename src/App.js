@@ -34,6 +34,21 @@ class App extends Component {
     this.setState({ educations: modified });
   };
 
+  createEducationForm = () => {
+    const { educations } = this.state;
+    const education = {
+      degree: "",
+      schoolName: "",
+      location: "",
+      startDate: "",
+      endDate: "",
+      id: uniqid(),
+    };
+    this.setState({
+      educations: [...educations, education],
+    });
+  };
+
   render() {
     const { fullName, email, phoneNumber, address, educations } = this.state;
 
@@ -72,19 +87,7 @@ class App extends Component {
               <button
                 className="create-education-form"
                 type="button"
-                onClick={() => {
-                  const object = {
-                    degree: "",
-                    schoolName: "",
-                    location: "",
-                    startDate: "",
-                    endDate: "",
-                    id: uniqid(),
-                  };
-                  this.setState({
-                    educations: [...educations, object],
-                  });
-                }}
+                onClick={this.createEducationForm}
               >
                 <h4 className="button-content">
                   <i className="fa-solid fa-plus" />
