@@ -15,6 +15,7 @@ class App extends Component {
       address: "",
 
       educations: [],
+      isEducationClosed: "closed",
     };
   }
 
@@ -68,18 +69,24 @@ class App extends Component {
               className="expand-add-education-section"
               type="button"
               onClick={() => {
-                const toggleElems = document.querySelectorAll(".toggle");
-                toggleElems.forEach((elem) => elem.classList.toggle("closed"));
+                const { isEducationClosed } = this.state;
+                this.setState({
+                  isEducationClosed: isEducationClosed ? "" : "closed",
+                });
               }}
             >
               <h2 className="add-education-header">
                 <i className="fa-solid fa-graduation-cap" />
                 Education
               </h2>
-              <i className="fa-solid fa-chevron-up chevron closed toggle" />
+              <i
+                className={`fa-solid fa-chevron-up chevron ${this.state.isEducationClosed}`}
+              />
             </button>
 
-            <div className="main-education-content closed toggle">
+            <div
+              className={`main-education-content ${this.state.isEducationClosed}`}
+            >
               <EducationForms
                 educations={educations}
                 onChange={this.handleEducationChange}
