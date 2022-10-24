@@ -77,7 +77,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <form action="" onSubmit={(e) => e.preventDefault()}>
+        <form action="" onSubmit={(e) => e.preventDefault()} noValidate>
           <PersonalDetails
             onChange={this.handleChange}
             fullName={fullName}
