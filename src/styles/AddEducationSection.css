@@ -45,3 +45,28 @@
 .create-education-form i {
   margin-right: 8px;
 }
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.buttons button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: none;
+  font-family: "NotoSans-bold";
+  flex-grow: 1;
+  max-width: 100px;
+}
+.buttons .cancel {
+  background-color: transparent;
+  outline: 1px solid grey;
+  color: grey;
+}
+
+.buttons .save {
+  background-color: rgb(24, 127, 245);
+  color: white;
+}

@@ -64,12 +64,14 @@ class EducationForm extends Component {
           data-key="location"
           optional
         />
-        <button className="cancel" onClick={cancel}>
-          Cancel
-        </button>
-        <button className="Save" onClick={save}>
-          Save
-        </button>
+        <div className="buttons">
+          <button className="cancel" onClick={cancel}>
+            Cancel
+          </button>
+          <button className="save" onClick={save}>
+            Save
+          </button>
+        </div>
       </div>
     );
   }
