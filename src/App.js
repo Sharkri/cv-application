@@ -64,7 +64,7 @@ class App extends Component {
             address={address}
           />
 
-          <div className="add-education-section closed">
+          <div className="add-education-section">
             <button
               className="expand-add-education-section"
               type="button"
