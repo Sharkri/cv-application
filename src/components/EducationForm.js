@@ -3,8 +3,17 @@ import InputGroup from "./InputGroup";
 
 class EducationForm extends Component {
   render() {
-    const { onChange, degree, schoolName, location, startDate, endDate, id } =
-      this.props;
+    const {
+      onChange,
+      degree,
+      schoolName,
+      location,
+      startDate,
+      endDate,
+      id,
+      cancel,
+      save,
+    } = this.props;
     return (
       <div className="education-form" id={id}>
         <InputGroup
@@ -55,6 +64,12 @@ class EducationForm extends Component {
           data-key="location"
           optional
         />
+        <button className="cancel" onClick={cancel}>
+          Cancel
+        </button>
+        <button className="Save" onClick={save}>
+          Save
+        </button>
       </div>
     );
   }

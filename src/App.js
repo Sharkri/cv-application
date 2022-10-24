@@ -57,6 +57,14 @@ class App extends Component {
     });
   };
 
+  removeEducationForm = (e) => {
+    const { educations } = this.state;
+    const id = e.target.closest(".education-form").id;
+    this.setState({
+      educations: educations.filter((education) => education.id !== id),
+    });
+  };
+
   render() {
     const {
       fullName,
@@ -84,6 +92,7 @@ class App extends Component {
             onChange={this.handleEducationChange}
             createForm={this.createEducationForm}
             toggleClosed={this.toggleEducationClosed}
+            onCancel={this.removeEducationForm}
           />
         </form>
 

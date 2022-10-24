@@ -3,7 +3,7 @@ import EducationForm from "./EducationForm";
 
 class EducationForms extends Component {
   render() {
-    const { educations, onChange } = this.props;
+    const { educations, onChange, onCancel, onSave } = this.props;
     return (
       <div className="education-forms-container">
         {educations.map((education) => (
@@ -16,6 +16,8 @@ class EducationForms extends Component {
             endDate={education.endDate}
             key={education.id}
             id={education.id}
+            cancel={onCancel}
+            save={onSave}
           />
         ))}
       </div>
