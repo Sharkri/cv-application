@@ -8,11 +8,7 @@ class AddEducationSection extends Component {
       this.props;
     return (
       <div className="add-education-section">
-        <button
-          className="expand-add-education-section"
-          type="button"
-          onClick={toggleClosed}
-        >
+        <button className="expand-add-education-section" onClick={toggleClosed}>
           <h2 className="add-education-header">
             <i className="fa-solid fa-graduation-cap" />
             Education
@@ -23,11 +19,7 @@ class AddEducationSection extends Component {
         <div className={`education-content ${isClosed}`}>
           <EducationForms educations={educations} onChange={onChange} />
 
-          <button
-            className="create-education-form"
-            type="button"
-            onClick={createForm}
-          >
+          <button className="create-education-form" onClick={createForm}>
             <h4 className="button-content">
               <i className="fa-solid fa-plus" />
               Education

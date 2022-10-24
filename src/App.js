@@ -69,7 +69,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <form action="">
+        <form action="" onSubmit={(e) => e.preventDefault()}>
           <PersonalDetails
             onChange={this.handleChange}
             fullName={fullName}
