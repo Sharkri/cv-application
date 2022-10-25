@@ -15,7 +15,11 @@ class EducationForm extends Component {
       save,
     } = this.props;
     return (
-      <div className="education-form form" id={id}>
+      <form
+        className="education-form form"
+        id={id}
+        onSubmit={(e) => e.preventDefault()}
+      >
         <InputGroup
           type="text"
           id="school-name"
@@ -65,14 +69,14 @@ class EducationForm extends Component {
           optional
         />
         <div className="buttons">
-          <button className="cancel" onClick={cancel}>
+          <button className="cancel" onClick={cancel} type="button">
             Cancel
           </button>
-          <button className="save" onClick={save}>
+          <button className="save" onClick={save} type="submit">
             Save
           </button>
         </div>
-      </div>
+      </form>
     );
   }
 }

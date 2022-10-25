@@ -89,7 +89,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <form action="" onSubmit={(e) => e.preventDefault()} noValidate>
+        <div className="form-container">
           <PersonalDetails
             onChange={this.handleChange}
             fullName={fullName}
@@ -107,7 +107,7 @@ class App extends Component {
             onCancel={this.removeEducationForm}
             onSave={this.toggleFormOpen}
           />
-        </form>
+        </div>
 
         <Resume
           fullName={fullName}

@@ -6,7 +6,7 @@ class PersonalDetails extends Component {
   render() {
     const { onChange, email, fullName, phoneNumber, address } = this.props;
     return (
-      <div className="personal-details">
+      <form className="personal-details">
         <h2>Personal Details</h2>
         <InputGroup
           type="text"
@@ -47,7 +47,7 @@ class PersonalDetails extends Component {
           data-key="address"
           recommended
         />
-      </div>
+      </form>
     );
   }
 }
