@@ -43,6 +43,7 @@ class App extends Component {
       location: "",
       startDate: "",
       endDate: "",
+      isCollapsed: false,
       id: uniqid(),
     };
     this.setState({
@@ -62,6 +63,17 @@ class App extends Component {
     const id = e.target.closest(".education-form").id;
     this.setState({
       educations: educations.filter((education) => education.id !== id),
+    });
+  };
+
+  saveEducationForm = (e) => {
+    const { educations } = this.state;
+    const id = e.target.closest(".education-form").id;
+    this.setState({
+      educations: educations.map((education) => {
+        if (education.id === id) education.isCollapsed = true;
+        return education;
+      }),
     });
   };
 
@@ -93,6 +105,7 @@ class App extends Component {
             createForm={this.createEducationForm}
             toggleClosed={this.toggleEducationClosed}
             onCancel={this.removeEducationForm}
+            onSave={this.saveEducationForm}
           />
         </form>
 

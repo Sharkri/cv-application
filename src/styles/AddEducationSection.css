@@ -24,6 +24,7 @@
 }
 
 .education-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,17 +40,28 @@
   border-radius: 69420px;
   border: 4px solid rgb(238, 240, 244);
   font-family: "NotoSans-SemiBold";
-  margin-bottom: 18px;
+  margin: 18px 0;
 }
 
 .create-education-form i {
   margin-right: 8px;
 }
 
+.education-form {
+  padding: 20px 18px;
+}
+
+.education-form.collapsed {
+  display: none;
+}
+
+.education-forms-container {
+  width: 100%;
+}
+
 .buttons {
   display: flex;
   gap: 8px;
-  margin-bottom: 24px;
 }
 
 .buttons button {
@@ -60,6 +72,7 @@
   flex-grow: 1;
   max-width: 100px;
 }
+
 .buttons .cancel {
   background-color: transparent;
   outline: 1px solid grey;
