@@ -66,12 +66,12 @@ class App extends Component {
     });
   };
 
-  saveEducationForm = (e) => {
+  toggleFormOpen = (e) => {
     const { educations } = this.state;
-    const id = e.target.closest(".education-form").id;
+    const id = e.target.closest(".form").id;
     this.setState({
       educations: educations.map((education) => {
-        if (education.id === id) education.isCollapsed = true;
+        if (education.id === id) education.isCollapsed = !education.isCollapsed;
         return education;
       }),
     });
@@ -105,7 +105,7 @@ class App extends Component {
             createForm={this.createEducationForm}
             toggleClosed={this.toggleEducationClosed}
             onCancel={this.removeEducationForm}
-            onSave={this.saveEducationForm}
+            onSave={this.toggleFormOpen}
           />
         </form>
 

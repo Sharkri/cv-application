@@ -4,14 +4,15 @@ import CollapsedForm from "./CollapsedForm";
 
 class EducationForms extends Component {
   render() {
-    const { educations, onChange, onCancel, onSave, onOpen } = this.props;
+    const { educations, onChange, onCancel, onSave } = this.props;
     return (
       <div className="education-forms-container">
         {educations.map((education) =>
           education.isCollapsed ? (
             <CollapsedForm
-              onClick={onOpen}
+              onClick={onSave}
               key={education.id}
+              id={education.id}
               title={education.schoolName}
             />
           ) : (

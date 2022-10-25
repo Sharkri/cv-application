@@ -3,9 +3,9 @@ import "../styles/CollapsedForm.css";
 
 class CollapsedForm extends Component {
   render() {
-    const { onClick, title } = this.props;
+    const { onClick, title, id } = this.props;
     return (
-      <button className="collapsed-form" onClick={onClick}>
+      <button className="collapsed-form form" id={id} onClick={onClick}>
         {title}
       </button>
     );

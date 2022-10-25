@@ -15,7 +15,7 @@ class EducationForm extends Component {
       save,
     } = this.props;
     return (
-      <div className="education-form" id={id}>
+      <div className="education-form form" id={id}>
         <InputGroup
           type="text"
           id="school-name"

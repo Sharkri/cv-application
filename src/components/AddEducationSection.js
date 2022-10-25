@@ -12,6 +12,7 @@ class AddEducationSection extends Component {
       toggleClosed,
       onCancel,
       onSave,
+      onOpen,
     } = this.props;
     return (
       <div className="add-education-section">
@@ -29,6 +30,7 @@ class AddEducationSection extends Component {
             onChange={onChange}
             onCancel={onCancel}
             onSave={onSave}
+            onOpen={onOpen}
           />
 
           <button className="create-education-form" onClick={createForm}>
