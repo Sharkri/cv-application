@@ -16,6 +16,7 @@ class App extends Component {
 
       educations: [],
       isEducationClosed: "closed",
+      prevState: "",
     };
   }
 
@@ -47,6 +48,7 @@ class App extends Component {
       isHidden: false,
       id: uniqid(),
     };
+    this.setState({ prevState: Object.assign({}, education) });
     this.setState({
       educations: [...educations, education],
     });
@@ -59,11 +61,17 @@ class App extends Component {
     });
   };
 
-  removeEducationForm = (e) => {
+  cancelEducationForm = (e) => {
     const { educations } = this.state;
-    const id = e.target.closest(".education-form").id;
+    const id = e.target.closest(".form").id;
     this.setState({
-      educations: educations.filter((education) => education.id !== id),
+      educations: educations.map((education) => {
+        if (education.id === id) {
+          education = this.state.prevState;
+          education.isCollapsed = true;
+        }
+        return education;
+      }),
     });
   };
 
@@ -72,7 +80,10 @@ class App extends Component {
     const id = e.target.closest(".form").id;
     this.setState({
       educations: educations.map((education) => {
-        if (education.id === id) education[key] = !education[key];
+        if (education.id === id) {
+          this.setState({ prevState: Object.assign({}, education) });
+          education[key] = !education[key];
+        }
         return education;
       }),
     });
@@ -108,7 +119,7 @@ class App extends Component {
             onChange={this.handleEducationChange}
             createForm={this.createEducationForm}
             toggleClosed={this.toggleEducationClosed}
-            onCancel={this.removeEducationForm}
+            onCancel={this.cancelEducationForm}
             onSave={this.toggleFormOpen}
             onHide={this.toggleHidden}
           />
