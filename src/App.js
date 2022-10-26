@@ -44,6 +44,7 @@ class App extends Component {
       startDate: "",
       endDate: "",
       isCollapsed: false,
+      isHidden: false,
       id: uniqid(),
     };
     this.setState({
@@ -66,16 +67,19 @@ class App extends Component {
     });
   };
 
-  toggleFormOpen = (e) => {
+  setItem = (e, key) => {
     const { educations } = this.state;
     const id = e.target.closest(".form").id;
     this.setState({
       educations: educations.map((education) => {
-        if (education.id === id) education.isCollapsed = !education.isCollapsed;
+        if (education.id === id) education[key] = !education[key];
         return education;
       }),
     });
   };
+
+  toggleFormOpen = (e) => this.setItem(e, "isCollapsed");
+  toggleHidden = (e) => this.setItem(e, "isHidden");
 
   render() {
     const {
@@ -106,6 +110,7 @@ class App extends Component {
             toggleClosed={this.toggleEducationClosed}
             onCancel={this.removeEducationForm}
             onSave={this.toggleFormOpen}
+            onHide={this.toggleHidden}
           />
         </div>
 

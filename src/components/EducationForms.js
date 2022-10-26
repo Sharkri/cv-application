@@ -4,7 +4,7 @@ import CollapsedForm from "./CollapsedForm";
 
 class EducationForms extends Component {
   render() {
-    const { educations, onChange, onCancel, onSave } = this.props;
+    const { educations, onChange, onCancel, onSave, onHide } = this.props;
     return (
       <div className="education-forms-container">
         {educations.map((education) =>
@@ -14,6 +14,8 @@ class EducationForms extends Component {
               key={education.id}
               id={education.id}
               title={education.schoolName}
+              isHidden={education.isHidden}
+              hideForm={onHide}
             />
           ) : (
             <EducationForm
