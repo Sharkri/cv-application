@@ -122,12 +122,15 @@ class App extends Component {
 
   toggleCollapsed = (e) => this.toggleValue(e, "isCollapsed");
   toggleHidden = (e) => this.toggleValue(e, "isHidden");
-  removeForm = (e) => {
-    const { educations } = this.state;
-    const id = e.target.closest(".form").id;
-    console.log(educations.filter((education) => education.id !== id));
+
+  removeItem = (e) => {
+    const form = e.target.closest(".form");
+    const arrayName = form.getAttribute("data-array-name");
+    const array = this.state[arrayName];
+    const { id } = form;
+
     this.setState({
-      educations: educations.filter((education) => education.id !== id),
+      [arrayName]: array.filter((item) => item.id !== id),
     });
   };
 
@@ -162,7 +165,7 @@ class App extends Component {
             onCancel={this.cancelEducationForm}
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
-            onRemove={this.removeForm}
+            onRemove={this.removeItem}
           />
 
           <AddExperienceSection
@@ -174,7 +177,7 @@ class App extends Component {
             onCancel={this.cancelEducationForm}
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
-            onRemove={this.removeForm}
+            onRemove={this.removeItem}
           />
         </div>
 
