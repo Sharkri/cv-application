@@ -16,6 +16,7 @@ class App extends Component {
       address: "",
 
       educations: [],
+      experiences: [],
       isEducationClosed: "closed",
       prevState: "",
     };
@@ -115,6 +116,7 @@ class App extends Component {
       phoneNumber,
       address,
       educations,
+      experiences,
       isEducationClosed,
     } = this.state;
 
@@ -142,7 +144,7 @@ class App extends Component {
           />
 
           <AddExperienceSection
-            educations={educations}
+            experiences={experiences}
             isClosed={isEducationClosed}
             onChange={this.handleEducationChange}
             createForm={this.createEducationForm}

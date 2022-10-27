@@ -5,7 +5,7 @@ import "../styles/AddEducationSection.css";
 
 class AddExperienceSection extends Component {
   render() {
-    const { isClosed, createForm, toggleClosed } = this.props;
+    const { isClosed, createForm, toggleClosed, experiences } = this.props;
     return (
       <div className="add-experience-section section">
         <ExpandSection
