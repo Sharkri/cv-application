@@ -8,7 +8,7 @@ class EducationInfoSection extends Component {
     return (
       <div className="education-info-section section">
         <br />
-        {educations.length && <h3 className="header-text">Education</h3>}
+        {!!educations.length && <h3 className="header-text">Education</h3>}
 
         {educations.map(
           (education) =>
