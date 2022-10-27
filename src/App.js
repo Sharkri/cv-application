@@ -26,13 +26,13 @@ class App extends Component {
     this.setState({ prevState: Object.assign({}, prevState) });
 
   handleChange = (e) => {
-    const key = e.target.getAttribute("data-key");
+    const { key } = e.target.dataset;
     this.setState({ [key]: e.target.value });
   };
 
   handleEducationChange = (e) => {
-    const key = e.target.getAttribute("data-key");
-    const id = e.target.closest(".education-form").id;
+    const { key } = e.target.dataset;
+    const { id } = e.target.closest(".education-form");
     const { educations } = this.state;
     const modified = educations.map((education) => {
       if (education.id === id) education[key] = e.target.value;
@@ -87,9 +87,10 @@ class App extends Component {
 
   cancelForm = (e) => {
     const form = e.target.closest(".form");
-    const arrayName = form.getAttribute("data-array-name");
+    const { id } = form;
+    const { arrayName } = form.dataset;
     const array = this.state[arrayName];
-    const id = e.target.closest(".form").id;
+
     this.setState({
       [arrayName]: array.map((object) => {
         if (object.id === id) {
@@ -106,7 +107,7 @@ class App extends Component {
   toggleValue = (e, key) => {
     const form = e.target.closest(".form");
     const { id } = form;
-    const arrayName = form.getAttribute("data-array-name");
+    const { arrayName } = form.dataset;
     const array = this.state[arrayName];
 
     this.setState({
@@ -126,7 +127,7 @@ class App extends Component {
 
   removeItem = (e) => {
     const form = e.target.closest(".form");
-    const arrayName = form.getAttribute("data-array-name");
+    const { arrayName } = form.dataset;
     const array = this.state[arrayName];
     const { id } = form;
 
