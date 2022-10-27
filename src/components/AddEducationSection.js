@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import EducationForms from "./EducationForms";
 import ExpandSection from "./ExpandSection";
+import CreateForm from "./CreateForm";
 import "../styles/AddEducationSection.css";
 
 class AddEducationSection extends Component {
@@ -36,12 +37,7 @@ class AddEducationSection extends Component {
             onRemove={onRemove}
           />
 
-          <button className="create-education-form" onClick={createForm}>
-            <h4 className="button-content">
-              <i className="fa-solid fa-plus" />
-              Education
-            </h4>
-          </button>
+          <CreateForm onClick={createForm} buttonText="Education" />
         </div>
       </div>
     );

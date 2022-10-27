@@ -1,0 +1,12 @@
+.create-form {
+  background-color: transparent;
+  padding: 8px 18px;
+  border-radius: 69420px;
+  border: 4px solid rgb(238, 240, 244);
+  font-family: "NotoSans-SemiBold";
+  margin: 18px 0;
+}
+
+.create-form .fa-plus {
+  margin-right: 8px;
+}
