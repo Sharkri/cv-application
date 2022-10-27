@@ -69,12 +69,18 @@ class EducationForm extends Component {
           optional
         />
         <div className="buttons">
-          <button className="cancel" onClick={cancel} type="button">
-            Cancel
+          <button className="delete">
+            <i className="fa-solid fa-trash" />
+            Delete
           </button>
-          <button className="save" onClick={save} type="submit">
-            Save
-          </button>
+          <div className="main-buttons">
+            <button className="cancel" onClick={cancel} type="button">
+              Cancel
+            </button>
+            <button className="save" onClick={save} type="submit">
+              Save
+            </button>
+          </div>
         </div>
       </form>
     );

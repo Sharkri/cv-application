@@ -10,7 +10,7 @@
   background-color: white;
 }
 
-.collapsed-form:last-child {
+.collapsed-form:last-of-type {
   border-bottom: 5px solid rgb(243, 244, 246);
 }
 

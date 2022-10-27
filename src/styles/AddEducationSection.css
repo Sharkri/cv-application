@@ -48,7 +48,7 @@
 }
 
 .education-form {
-  padding: 20px 18px;
+  padding: 18px;
 }
 
 .education-form.collapsed {
@@ -61,7 +61,15 @@
 
 .buttons {
   display: flex;
-  gap: 8px;
+  justify-content: space-around;
+  margin-top: 18px;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-grow: 1;
 }
 
 .buttons button {
@@ -82,4 +90,13 @@
 .buttons .save {
   background-color: rgb(24, 127, 245);
   color: white;
+}
+
+.buttons .delete {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: grey;
+  outline: 1px solid grey;
 }
