@@ -11,7 +11,7 @@ class AddEducationSection extends Component {
       createForm,
       toggleClosed,
       onCancel,
-      onSave,
+      toggleCollapsed,
       onOpen,
       onHide,
     } = this.props;
@@ -30,7 +30,7 @@ class AddEducationSection extends Component {
             educations={educations}
             onChange={onChange}
             onCancel={onCancel}
-            onSave={onSave}
+            toggleCollapsed={toggleCollapsed}
             onOpen={onOpen}
             onHide={onHide}
           />

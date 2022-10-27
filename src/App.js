@@ -20,6 +20,9 @@ class App extends Component {
     };
   }
 
+  setPrevState = (prevState) =>
+    this.setState({ prevState: Object.assign({}, prevState) });
+
   handleChange = (e) => {
     const key = e.target.getAttribute("data-key");
     this.setState({ [key]: e.target.value });
@@ -48,7 +51,8 @@ class App extends Component {
       isHidden: false,
       id: uniqid(),
     };
-    this.setState({ prevState: Object.assign({}, education) });
+    this.setPrevState(education);
+
     this.setState({
       educations: [...educations, education],
     });
@@ -70,18 +74,19 @@ class App extends Component {
           education = this.state.prevState;
           education.isCollapsed = true;
         }
+
         return education;
       }),
     });
   };
 
-  setItem = (e, key) => {
+  toggleValue = (e, key) => {
     const { educations } = this.state;
     const id = e.target.closest(".form").id;
     this.setState({
       educations: educations.map((education) => {
         if (education.id === id) {
-          this.setState({ prevState: Object.assign({}, education) });
+          this.setPrevState(education);
           education[key] = !education[key];
         }
         return education;
@@ -89,8 +94,8 @@ class App extends Component {
     });
   };
 
-  toggleFormOpen = (e) => this.setItem(e, "isCollapsed");
-  toggleHidden = (e) => this.setItem(e, "isHidden");
+  toggleCollapsed = (e) => this.toggleValue(e, "isCollapsed");
+  toggleHidden = (e) => this.toggleValue(e, "isHidden");
 
   render() {
     const {
@@ -120,7 +125,7 @@ class App extends Component {
             createForm={this.createEducationForm}
             toggleClosed={this.toggleEducationClosed}
             onCancel={this.cancelEducationForm}
-            onSave={this.toggleFormOpen}
+            toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
           />
         </div>
