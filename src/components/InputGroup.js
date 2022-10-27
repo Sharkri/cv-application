@@ -22,10 +22,8 @@ class InputGroup extends Component {
       <div className="input-group">
         <label htmlFor={id}>
           <span className="label-text">{labelText}</span>
-          {optional ? <span className="optional-text">optional</span> : null}
-          {recommended ? (
-            <span className="recommended-text">recommended</span>
-          ) : null}
+          {optional && <span className="optional-text">optional</span>}
+          {recommended && <span className="recommended-text">recommended</span>}
         </label>
         <input
           type={type}

@@ -8,18 +8,26 @@ class PersonalInfoSection extends Component {
       <div className="personal-info">
         <h1 className="resume-name">{fullName}</h1>
         <div className="contact-info">
-          <div>
-            {email ? <i className="fa-solid fa-envelope" /> : null}
-            <span>{email}</span>
-          </div>
-          <div>
-            {phoneNumber ? <i className="fa-solid fa-phone" /> : null}
-            <span>{phoneNumber}</span>
-          </div>
-          <div>
-            {address ? <i className="fa-solid fa-location-dot" /> : null}
-            <span>{address}</span>
-          </div>
+          {email && (
+            <div>
+              <i className="fa-solid fa-envelope" />
+              <span>{email}</span>
+            </div>
+          )}
+
+          {phoneNumber && (
+            <div>
+              <i className="fa-solid fa-phone" />
+              <span>{phoneNumber}</span>
+            </div>
+          )}
+
+          {address && (
+            <div>
+              <i className="fa-solid fa-location-dot" />
+              <span>{address}</span>
+            </div>
+          )}
         </div>
       </div>
     );
