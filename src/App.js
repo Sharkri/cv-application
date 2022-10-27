@@ -85,15 +85,19 @@ class App extends Component {
   };
 
   toggleValue = (e, key) => {
-    const { educations } = this.state;
-    const id = e.target.closest(".form").id;
+    const form = e.target.closest(".form");
+    const { id } = form;
+    const arrayName = form.getAttribute("data-array-name");
+    const array = this.state[arrayName];
+
     this.setState({
-      educations: educations.map((education) => {
-        if (education.id === id) {
-          this.setPrevState(education);
-          education[key] = !education[key];
+      [arrayName]: array.map((object) => {
+        if (object.id === id) {
+          this.setPrevState(object);
+          object[key] = !object[key];
         }
-        return education;
+
+        return object;
       }),
     });
   };

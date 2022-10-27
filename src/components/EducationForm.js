@@ -19,6 +19,7 @@ class EducationForm extends Component {
       <form
         className="education-form form"
         id={id}
+        data-array-name="educations"
         onSubmit={(e) => e.preventDefault()}
       >
         <InputGroup
