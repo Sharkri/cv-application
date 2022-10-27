@@ -24,6 +24,7 @@ class AddEducationSection extends Component {
           isClosed={isClosed}
           toggleClosed={toggleClosed}
           sectionName="Education"
+          iconName="fa-solid fa-graduation-cap"
         />
 
         <div className={`section-content ${isClosed}`}>

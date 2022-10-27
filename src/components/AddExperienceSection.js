@@ -12,6 +12,7 @@ class AddExperienceSection extends Component {
           isClosed={isClosed}
           toggleClosed={toggleClosed}
           sectionName="Experience"
+          iconName="fa-solid fa-briefcase"
         />
 
         <div className="section-content">
