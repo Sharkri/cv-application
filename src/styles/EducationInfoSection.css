@@ -1,6 +1,16 @@
+.education-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .education-info {
   display: flex;
-  gap: 48px;
+  gap: 18px;
+}
+
+.education-info-group {
+  min-width: 150px;
 }
 
 .education-info-schoolName {

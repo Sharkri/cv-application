@@ -10,19 +10,21 @@ class EducationInfoSection extends Component {
         <br />
         {!!educations.length && <h3 className="header-text">Education</h3>}
 
-        {educations.map(
-          (education) =>
-            !education.isHidden && (
-              <EducationInfo
-                schoolName={education.schoolName}
-                degree={education.degree}
-                location={education.location}
-                startDate={education.startDate}
-                endDate={education.endDate}
-                key={education.id}
-              />
-            )
-        )}
+        <div className="education-info-container">
+          {educations.map(
+            (education) =>
+              !education.isHidden && (
+                <EducationInfo
+                  schoolName={education.schoolName}
+                  degree={education.degree}
+                  location={education.location}
+                  startDate={education.startDate}
+                  endDate={education.endDate}
+                  key={education.id}
+                />
+              )
+          )}
+        </div>
       </div>
     );
   }
