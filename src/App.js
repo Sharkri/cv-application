@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./styles/App.css";
 import PersonalDetails from "./components/PersonalDetails";
 import AddEducationSection from "./components/AddEducationSection";
+import AddExperienceSection from "./components/AddExperienceSection";
 import Resume from "./components/Resume";
 import uniqid from "uniqid";
 
@@ -129,6 +130,18 @@ class App extends Component {
           />
 
           <AddEducationSection
+            educations={educations}
+            isClosed={isEducationClosed}
+            onChange={this.handleEducationChange}
+            createForm={this.createEducationForm}
+            toggleClosed={this.toggleEducationClosed}
+            onCancel={this.cancelEducationForm}
+            toggleCollapsed={this.toggleCollapsed}
+            onHide={this.toggleHidden}
+            onRemove={this.removeForm}
+          />
+
+          <AddExperienceSection
             educations={educations}
             isClosed={isEducationClosed}
             onChange={this.handleEducationChange}

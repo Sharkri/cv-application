@@ -19,14 +19,14 @@ class AddEducationSection extends Component {
       onRemove,
     } = this.props;
     return (
-      <div className="add-education-section">
+      <div className="add-education-section section">
         <ExpandSection
           isClosed={isClosed}
           toggleClosed={toggleClosed}
           sectionName="Education"
         />
 
-        <div className={`education-content ${isClosed}`}>
+        <div className={`section-content ${isClosed}`}>
           <EducationForms
             educations={educations}
             onChange={onChange}
