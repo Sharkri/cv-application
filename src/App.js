@@ -41,8 +41,15 @@ class App extends Component {
     this.setState({ educations: modified });
   };
 
+  createForm = (arrayName, object) => {
+    this.setPrevState(object);
+    const array = this.state[arrayName];
+    this.setState({
+      [arrayName]: [...array, object],
+    });
+  };
+
   createEducationForm = () => {
-    const { educations } = this.state;
     const education = {
       degree: "",
       schoolName: "",
@@ -53,11 +60,22 @@ class App extends Component {
       isHidden: false,
       id: uniqid(),
     };
-    this.setPrevState(education);
+    this.createForm("educations", education);
+  };
 
-    this.setState({
-      educations: [...educations, education],
-    });
+  createExperienceForm = () => {
+    const experience = {
+      companyName: "",
+      positionTitle: "",
+      location: "",
+      description: "",
+      startDate: "",
+      endDate: "",
+      isCollapsed: false,
+      isHidden: false,
+      id: uniqid(),
+    };
+    this.createForm("experiences", experience);
   };
 
   toggleEducationClosed = () => {
@@ -151,7 +169,7 @@ class App extends Component {
             experiences={experiences}
             isClosed={isEducationClosed}
             onChange={this.handleEducationChange}
-            createForm={this.createEducationForm}
+            createForm={this.createExperienceForm}
             toggleClosed={this.toggleEducationClosed}
             onCancel={this.cancelEducationForm}
             toggleCollapsed={this.toggleCollapsed}
