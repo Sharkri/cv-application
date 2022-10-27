@@ -17,7 +17,7 @@ class App extends Component {
 
       educations: [],
       experiences: [],
-      isEducationClosed: "closed",
+      sectionOpen: "",
       prevState: "",
     };
   }
@@ -78,13 +78,7 @@ class App extends Component {
     this.createForm("experiences", experience);
   };
 
-  toggleEducationClosed = () => {
-    const { isEducationClosed } = this.state;
-    this.setState({
-      isEducationClosed: isEducationClosed ? "" : "closed",
-    });
-  };
-
+  setOpen = (sectionName) => this.setState({ sectionOpen: sectionName });
   cancelForm = (e) => {
     const form = e.target.closest(".form");
     const { id } = form;
@@ -144,7 +138,7 @@ class App extends Component {
       address,
       educations,
       experiences,
-      isEducationClosed,
+      sectionOpen,
     } = this.state;
 
     return (
@@ -160,10 +154,10 @@ class App extends Component {
 
           <AddEducationSection
             educations={educations}
-            isClosed={isEducationClosed}
+            isClosed={sectionOpen !== "Education" ? "closed" : ""}
             onChange={this.handleEducationChange}
             createForm={this.createEducationForm}
-            toggleClosed={this.toggleEducationClosed}
+            setOpen={this.setOpen}
             onCancel={this.cancelForm}
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}

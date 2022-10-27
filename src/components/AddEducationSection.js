@@ -11,7 +11,7 @@ class AddEducationSection extends Component {
       isClosed,
       onChange,
       createForm,
-      toggleClosed,
+      setOpen,
       onCancel,
       toggleCollapsed,
       onOpen,
@@ -22,7 +22,7 @@ class AddEducationSection extends Component {
       <div className="add-education-section section">
         <ExpandSection
           isClosed={isClosed}
-          toggleClosed={toggleClosed}
+          setOpen={setOpen}
           sectionName="Education"
           iconName="fa-solid fa-graduation-cap"
         />

@@ -3,9 +3,12 @@ import "../styles/ExpandSection.css";
 
 class ExpandSection extends Component {
   render() {
-    const { isClosed, toggleClosed, sectionName, iconName } = this.props;
+    const { isClosed, setOpen, sectionName, iconName } = this.props;
     return (
-      <button className="expand-section" onClick={toggleClosed}>
+      <button
+        className="expand-section"
+        onClick={() => setOpen(isClosed ? sectionName : "")}
+      >
         <h2 className="expand-section-header">
           <i className={`${iconName}`} />
           {sectionName}
