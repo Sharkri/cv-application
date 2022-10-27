@@ -5,17 +5,17 @@ import "../styles/AddEducationSection.css";
 
 class AddExperienceSection extends Component {
   render() {
-    const { isClosed, createForm, toggleClosed, experiences } = this.props;
+    const { isClosed, createForm, setOpen, experiences } = this.props;
     return (
       <div className="add-experience-section section">
         <ExpandSection
           isClosed={isClosed}
-          toggleClosed={toggleClosed}
+          setOpen={setOpen}
           sectionName="Experience"
           iconName="fa-solid fa-briefcase"
         />
 
-        <div className="section-content">
+        <div className={`section-content ${isClosed}`}>
           <CreateForm onClick={createForm} buttonText="Experience" />
         </div>
       </div>

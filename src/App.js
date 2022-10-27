@@ -164,17 +164,17 @@ class App extends Component {
             onRemove={this.removeItem}
           />
 
-          {/* <AddExperienceSection
+          <AddExperienceSection
             experiences={experiences}
-            isClosed={isEducationClosed}
+            isClosed={sectionOpen !== "Experience" ? "closed" : ""}
             onChange={this.handleEducationChange}
             createForm={this.createExperienceForm}
-            toggleClosed={this.toggleEducationClosed}
-            onCancel={this.cancelEducationForm}
+            setOpen={this.setOpen}
+            onCancel={this.cancelForm}
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
             onRemove={this.removeItem}
-          /> */}
+          />
         </div>
 
         <Resume
