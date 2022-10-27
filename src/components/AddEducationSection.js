@@ -14,6 +14,7 @@ class AddEducationSection extends Component {
       toggleCollapsed,
       onOpen,
       onHide,
+      onRemove,
     } = this.props;
     return (
       <div className="add-education-section">
@@ -33,6 +34,7 @@ class AddEducationSection extends Component {
             toggleCollapsed={toggleCollapsed}
             onOpen={onOpen}
             onHide={onHide}
+            onRemove={onRemove}
           />
 
           <button className="create-education-form" onClick={createForm}>

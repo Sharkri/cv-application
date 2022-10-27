@@ -13,6 +13,7 @@ class EducationForm extends Component {
       id,
       cancel,
       save,
+      remove,
     } = this.props;
     return (
       <form
@@ -69,7 +70,7 @@ class EducationForm extends Component {
           optional
         />
         <div className="buttons">
-          <button className="delete">
+          <button className="delete" onClick={remove} type="button">
             <i className="fa-solid fa-trash" />
             Delete
           </button>
