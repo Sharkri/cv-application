@@ -85,19 +85,20 @@ class App extends Component {
     });
   };
 
-  cancelEducationForm = (e) => {
-    console.log(this.state.prevState);
-
-    const { educations } = this.state;
+  cancelForm = (e) => {
+    const form = e.target.closest(".form");
+    const arrayName = form.getAttribute("data-array-name");
+    const array = this.state[arrayName];
     const id = e.target.closest(".form").id;
     this.setState({
-      educations: educations.map((education) => {
-        if (education.id === id) {
-          education = this.state.prevState;
-          education.isCollapsed = true;
+      [arrayName]: array.map((object) => {
+        if (object.id === id) {
+          // Revert back to previous state
+          object = this.state.prevState;
+          object.isCollapsed = true;
         }
 
-        return education;
+        return object;
       }),
     });
   };
@@ -162,13 +163,13 @@ class App extends Component {
             onChange={this.handleEducationChange}
             createForm={this.createEducationForm}
             toggleClosed={this.toggleEducationClosed}
-            onCancel={this.cancelEducationForm}
+            onCancel={this.cancelForm}
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
             onRemove={this.removeItem}
           />
 
-          <AddExperienceSection
+          {/* <AddExperienceSection
             experiences={experiences}
             isClosed={isEducationClosed}
             onChange={this.handleEducationChange}
@@ -178,7 +179,7 @@ class App extends Component {
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
             onRemove={this.removeItem}
-          />
+          /> */}
         </div>
 
         <Resume
