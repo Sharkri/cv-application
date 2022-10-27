@@ -16,6 +16,7 @@ input:focus {
   flex-direction: column;
   gap: 6px;
   margin-bottom: 12px;
+  flex-grow: 1;
 }
 
 .education-dates {
