@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .education-content.closed {
@@ -31,7 +32,13 @@
 }
 
 .education-form {
-  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .education-form.collapsed {

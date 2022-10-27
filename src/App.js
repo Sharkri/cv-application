@@ -66,6 +66,8 @@ class App extends Component {
   };
 
   cancelEducationForm = (e) => {
+    console.log(this.state.prevState);
+
     const { educations } = this.state;
     const id = e.target.closest(".form").id;
     this.setState({

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 32px 24px 0 24px;
+  padding: 32px 24px;
   gap: 24px;
 }
 
@@ -11,7 +11,12 @@
   flex-direction: column;
   flex-grow: 1;
   max-width: 500px;
-  gap: 12px;
+  gap: 28px;
+}
+
+form {
+  padding: 18px;
+  border-radius: 12px;
 }
 
 .chevron {
