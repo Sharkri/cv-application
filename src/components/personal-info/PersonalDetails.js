@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import InputGroup from "./InputGroup";
-import "../styles/PersonalDetails.css";
+import InputGroup from "../InputGroup";
+import "../../styles/PersonalDetails.css";
 
 class PersonalDetails extends Component {
   render() {

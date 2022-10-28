@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import InputGroup from "./InputGroup";
+import InputGroup from "../InputGroup";
 
 class EducationForm extends Component {
   render() {

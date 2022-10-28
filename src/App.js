@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./styles/App.css";
-import PersonalDetails from "./components/PersonalDetails";
-import AddEducationSection from "./components/AddEducationSection";
-import AddExperienceSection from "./components/AddExperienceSection";
+import PersonalDetails from "./components/personal-info/PersonalDetails";
+import AddEducationSection from "./components/education/AddEducationSection";
+import AddExperienceSection from "./components/experience/AddExperienceSection";
 import Resume from "./components/Resume";
 import uniqid from "uniqid";
 

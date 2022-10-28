@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import EducationForm from "./EducationForm";
-import CollapsedForm from "./CollapsedForm";
+import CollapsedForm from "../CollapsedForm";
 
 class EducationForms extends Component {
   render() {
