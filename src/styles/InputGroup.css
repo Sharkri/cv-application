@@ -6,6 +6,11 @@ textarea {
   transition: border 0.25s, box-shadow 0.25s;
 }
 
+textarea {
+  max-width: 100%;
+  min-height: 42px;
+}
+
 input:focus,
 textarea:focus {
   border-color: rgb(59, 131, 246);
