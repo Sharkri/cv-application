@@ -8,7 +8,10 @@ class ExperienceInfoSection extends Component {
     const { experiences } = this.props;
     return (
       <div className="experience-info-section resume-section">
-        {!!experiences.length && <ResumeHeaderSection title="Experiences" />}
+        {!experiences.every((experience) => experience.isHidden) && (
+          <ResumeHeaderSection title="Experiences" />
+        )}
+
         <DisplayInfo array={experiences} InfoComponent={ExperienceInfo} />
       </div>
     );

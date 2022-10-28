@@ -8,7 +8,9 @@ class EducationInfoSection extends Component {
     const { educations } = this.props;
     return (
       <div className="education-info-section resume-section">
-        {!!educations.length && <ResumeHeaderSection title="Education" />}
+        {!educations.every((education) => education.isHidden) && (
+          <ResumeHeaderSection title="Education" />
+        )}
         <DisplayInfo array={educations} InfoComponent={EducationInfo} />
       </div>
     );
