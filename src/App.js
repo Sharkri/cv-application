@@ -36,7 +36,7 @@ class App extends Component {
     const { id } = form;
     const { arrayName } = form.dataset;
     const array = this.state[arrayName];
-
+    console.log(key, id, arrayName);
     this.setState({
       [arrayName]: array.map((obj) => {
         if (obj.id === id) obj[key] = e.target.value;

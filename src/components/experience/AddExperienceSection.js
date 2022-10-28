@@ -2,10 +2,22 @@ import React, { Component } from "react";
 import ExpandSection from "../ExpandSection";
 import CreateForm from "../CreateForm";
 import "../../styles/AddEducationSection.css";
+import DisplayForms from "../DisplayForms";
+import ExperienceForm from "./ExperienceForm";
 
 class AddExperienceSection extends Component {
   render() {
-    const { isClosed, createForm, setOpen, experiences } = this.props;
+    const {
+      isClosed,
+      createForm,
+      setOpen,
+      experiences,
+      onChange,
+      onCancel,
+      toggleCollapsed,
+      onHide,
+      onRemove,
+    } = this.props;
     return (
       <div className="add-experience-section section">
         <ExpandSection
@@ -16,6 +28,16 @@ class AddExperienceSection extends Component {
         />
 
         <div className={`section-content ${isClosed}`}>
+          <DisplayForms
+            forms={experiences}
+            onChange={onChange}
+            onCancel={onCancel}
+            toggleCollapsed={toggleCollapsed}
+            onHide={onHide}
+            onRemove={onRemove}
+            FormComponent={ExperienceForm}
+          />
+
           <CreateForm onClick={createForm} buttonText="Experience" />
         </div>
       </div>
