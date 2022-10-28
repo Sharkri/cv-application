@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../../styles/ExperienceInfoSection.css";
 import ExperienceInfo from "./ExperienceInfo";
 import DisplayInfo from "../DisplayInfo";
 import ResumeHeaderSection from "../ResumeHeaderSection";

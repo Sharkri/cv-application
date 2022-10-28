@@ -1,0 +1,16 @@
+.experience-info {
+  display: flex;
+  gap: 18px;
+}
+
+.experience-info-group {
+  min-width: 150px;
+}
+
+.experience-info-companyName {
+  font-family: "NotoSans-bold";
+}
+
+.experience-info-positionTitle {
+  font-size: 15.3px;
+}

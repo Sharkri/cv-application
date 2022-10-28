@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../styles/ExperienceInfoSection.css";
+import "../../styles/ExperienceInfo.css";
 
 class ExperienceInfo extends Component {
   render() {
@@ -13,12 +13,19 @@ class ExperienceInfo extends Component {
     } = this.props.info;
     return (
       <div className="experience-info">
-        {companyName}
-        {positionTitle}
-        {location}
-        {description}
-        {startDate}
-        {endDate}
+        <div className="experience-info-group">
+          <p className="dates">
+            {startDate}
+            {startDate && endDate && <span> – </span>}
+            {endDate}
+          </p>
+          <p>{location}</p>
+        </div>
+
+        <div className="experience-info-group">
+          <p className="experience-info-companyName">{companyName}</p>
+          <p className="experience-info-positionTitle">{positionTitle}</p>
+        </div>
       </div>
     );
   }
