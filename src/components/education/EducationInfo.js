@@ -3,7 +3,8 @@ import "../../styles/EducationInfoSection.css";
 
 class EducationInfo extends Component {
   render() {
-    const { schoolName, degree, location, startDate, endDate } = this.props;
+    const { schoolName, degree, location, startDate, endDate } =
+      this.props.info;
     return (
       <div className="education-info">
         <div className="education-info-group">
