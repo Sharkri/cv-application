@@ -3,6 +3,7 @@ import "../../styles/EducationInfoSection.css";
 import EducationInfo from "./EducationInfo";
 import DisplayInfo from "../DisplayInfoSection";
 import ResumeHeaderSection from "../ResumeHeaderSection";
+
 class EducationInfoSection extends Component {
   render() {
     const { educations } = this.props;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/ResumeHeaderSection.css";
 
 class ResumeHeaderSection extends Component {
   render() {
