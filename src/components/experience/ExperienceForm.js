@@ -72,7 +72,7 @@ class ExperienceForm extends Component {
           optional
         />
         <InputGroup
-          type="text"
+          type="textarea"
           id="description"
           labelText="description"
           placeholder="Enter Description"

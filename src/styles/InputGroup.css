@@ -1,11 +1,13 @@
-input {
+input,
+textarea {
   border: 2px solid #eee;
   padding: 10px;
   border-radius: 12px;
-  transition: 0.25s;
+  transition: border 0.25s, box-shadow 0.25s;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   border-color: rgb(59, 131, 246);
   outline: none;
   box-shadow: 0px 3px 15px rgba(59, 131, 246, 0.2);

@@ -25,14 +25,25 @@ class InputGroup extends Component {
           {optional && <span className="optional-text">optional</span>}
           {recommended && <span className="recommended-text">recommended</span>}
         </label>
-        <input
-          type={type}
-          id={id}
-          placeholder={placeholder}
-          onChange={onChange}
-          value={value}
-          data-key={dataKey}
-        />
+
+        {type === "textarea" ? (
+          <textarea
+            id={id}
+            placeholder={placeholder}
+            onChange={onChange}
+            value={value}
+            data-key={dataKey}
+          ></textarea>
+        ) : (
+          <input
+            type={type}
+            id={id}
+            placeholder={placeholder}
+            onChange={onChange}
+            value={value}
+            data-key={dataKey}
+          />
+        )}
       </div>
     );
   }
