@@ -1,6 +1,7 @@
 input,
 textarea {
-  border: 2px solid #eee;
+  border: 2px solid transparent;
+  background-color: var(--main-bg-color);
   padding: 10px;
   border-radius: 12px;
   transition: border 0.25s, box-shadow 0.25s;
