@@ -30,15 +30,19 @@ class App extends Component {
     this.setState({ [key]: e.target.value });
   };
 
-  handleEducationChange = (e) => {
+  handleSectionChange = (e) => {
     const { key } = e.target.dataset;
-    const { id } = e.target.closest(".education-form");
-    const { educations } = this.state;
-    const modified = educations.map((education) => {
-      if (education.id === id) education[key] = e.target.value;
-      return education;
+    const form = e.target.closest(".form");
+    const { id } = form;
+    const { arrayName } = form.dataset;
+    const array = this.state[arrayName];
+
+    this.setState({
+      [arrayName]: array.map((obj) => {
+        if (obj.id === id) obj[key] = e.target.value;
+        return obj;
+      }),
     });
-    this.setState({ educations: modified });
   };
 
   createForm = (arrayName, object) => {
@@ -155,7 +159,7 @@ class App extends Component {
           <AddEducationSection
             educations={educations}
             isClosed={sectionOpen !== "Education" ? "closed" : ""}
-            onChange={this.handleEducationChange}
+            onChange={this.handleSectionChange}
             createForm={this.createEducationForm}
             setOpen={this.setOpen}
             onCancel={this.cancelForm}
@@ -167,7 +171,7 @@ class App extends Component {
           <AddExperienceSection
             experiences={experiences}
             isClosed={sectionOpen !== "Experience" ? "closed" : ""}
-            onChange={this.handleEducationChange}
+            onChange={this.handleSectionChange}
             createForm={this.createExperienceForm}
             setOpen={this.setOpen}
             onCancel={this.cancelForm}
