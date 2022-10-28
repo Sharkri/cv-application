@@ -1,6 +1,7 @@
 .education-info {
   display: flex;
   gap: 18px;
+  margin-bottom: 24px;
 }
 
 .education-info-group {

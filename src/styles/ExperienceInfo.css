@@ -1,6 +1,7 @@
 .experience-info {
   display: flex;
   gap: 18px;
+  margin-bottom: 24px;
 }
 
 .experience-info-group {
