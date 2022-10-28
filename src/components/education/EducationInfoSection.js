@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import EducationInfo from "./EducationInfo";
-import DisplayInfo from "../DisplayInfo";
-import ResumeHeaderSection from "../ResumeHeaderSection";
+import DisplaySection from "../DisplaySection";
 
 class EducationInfoSection extends Component {
   render() {
     const { educations } = this.props;
     return (
       <div className="education-info-section resume-section">
-        {!educations.every((education) => education.isHidden) && (
-          <ResumeHeaderSection title="Education" />
-        )}
-        <DisplayInfo array={educations} InfoComponent={EducationInfo} />
+        <DisplaySection
+          array={educations}
+          InfoComponent={EducationInfo}
+          title="Education"
+        />
       </div>
     );
   }
