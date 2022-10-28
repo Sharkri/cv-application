@@ -36,6 +36,7 @@ class AddEducationSection extends Component {
             onHide={onHide}
             onRemove={onRemove}
             toggleCollapsed={toggleCollapsed}
+            titleKey="schoolName"
           />
 
           <CreateForm onClick={createForm} buttonText="Education" />

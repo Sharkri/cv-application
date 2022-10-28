@@ -3,8 +3,8 @@ import "../styles/CollapsedForm.css";
 
 class CollapsedForm extends Component {
   render() {
-    const { onClick, hideForm } = this.props;
-    const { isHidden, title, id } = this.props.form;
+    const { onClick, hideForm, title } = this.props;
+    const { isHidden, id } = this.props.form;
     return (
       <button
         className="collapsed-form section-form"

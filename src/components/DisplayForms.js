@@ -11,6 +11,7 @@ class DisplayForms extends Component {
       onHide,
       onRemove,
       FormComponent,
+      titleKey,
     } = this.props;
     return (
       <div className="forms-container">
@@ -20,6 +21,7 @@ class DisplayForms extends Component {
               onClick={toggleCollapsed}
               key={form.id}
               form={form}
+              title={form[titleKey]}
               hideForm={onHide}
             />
           ) : (
