@@ -4,12 +4,12 @@ class DisplayInfo extends Component {
   render() {
     const { array, InfoComponent } = this.props;
     return (
-      <div className="info-container">
+      <React.Fragment>
         {array.map(
           (info) =>
             !info.isHidden && <InfoComponent info={info} key={info.id} />
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
