@@ -12,6 +12,7 @@ class DisplayForms extends Component {
       onRemove,
       FormComponent,
       titleKey,
+      arrayName,
     } = this.props;
     return (
       <div className="forms-container">
@@ -22,6 +23,7 @@ class DisplayForms extends Component {
               key={form.id}
               form={form}
               title={form[titleKey]}
+              arrayName={arrayName}
               hideForm={onHide}
             />
           ) : (
