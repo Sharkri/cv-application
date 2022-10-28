@@ -3,18 +3,11 @@ import InputGroup from "../InputGroup";
 
 class EducationForm extends Component {
   render() {
-    const {
-      onChange,
-      degree,
-      schoolName,
-      location,
-      startDate,
-      endDate,
-      id,
-      cancel,
-      save,
-      remove,
-    } = this.props;
+    const { degree, schoolName, location, startDate, endDate, id } =
+      this.props.form;
+
+    const { onChange, cancel, save, remove } = this.props;
+
     return (
       <form
         className="education-form form"

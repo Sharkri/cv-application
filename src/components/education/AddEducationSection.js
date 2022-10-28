@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import EducationForms from "./EducationForms";
+import DisplayForms from "../DisplayForms";
 import ExpandSection from "../ExpandSection";
 import CreateForm from "../CreateForm";
 import "../../styles/AddEducationSection.css";
+import EducationForm from "./EducationForm";
 
 class AddEducationSection extends Component {
   render() {
@@ -14,7 +15,6 @@ class AddEducationSection extends Component {
       setOpen,
       onCancel,
       toggleCollapsed,
-      onOpen,
       onHide,
       onRemove,
     } = this.props;
@@ -28,14 +28,14 @@ class AddEducationSection extends Component {
         />
 
         <div className={`section-content ${isClosed}`}>
-          <EducationForms
-            educations={educations}
+          <DisplayForms
+            forms={educations}
+            FormComponent={EducationForm}
             onChange={onChange}
             onCancel={onCancel}
-            toggleCollapsed={toggleCollapsed}
-            onOpen={onOpen}
             onHide={onHide}
             onRemove={onRemove}
+            toggleCollapsed={toggleCollapsed}
           />
 
           <CreateForm onClick={createForm} buttonText="Education" />
