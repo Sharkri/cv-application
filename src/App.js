@@ -22,9 +22,6 @@ class App extends Component {
     };
   }
 
-  setPrevState = (prevState) =>
-    this.setState({ prevState: Object.assign({}, prevState) });
-
   handleChange = (e) => {
     const { key } = e.target.dataset;
     this.setState({ [key]: e.target.value });
@@ -46,7 +43,7 @@ class App extends Component {
   };
 
   createForm = (arrayName, object) => {
-    this.setPrevState(object);
+    this.setState({ prevState: null });
     const array = this.state[arrayName];
     this.setState({
       [arrayName]: [...array, object],
@@ -84,6 +81,13 @@ class App extends Component {
 
   setOpen = (sectionName) => this.setState({ sectionOpen: sectionName });
   cancelForm = (e) => {
+    const { prevState } = this.state;
+    // if no prevState found remove form
+    if (!prevState) {
+      this.removeForm(e);
+      return;
+    }
+
     const form = e.target.closest(".section-form");
     const { id } = form;
     const { arrayName } = form.dataset;
@@ -93,7 +97,7 @@ class App extends Component {
       [arrayName]: array.map((object) => {
         if (object.id === id) {
           // Revert back to previous state
-          object = this.state.prevState;
+          object = prevState;
           object.isCollapsed = true;
         }
 
@@ -111,7 +115,7 @@ class App extends Component {
     this.setState({
       [arrayName]: array.map((object) => {
         if (object.id === id) {
-          this.setPrevState(object);
+          this.setState({ prevState: Object.assign({}, object) });
           object[key] = !object[key];
         }
 
@@ -123,7 +127,7 @@ class App extends Component {
   toggleCollapsed = (e) => this.toggleValue(e, "isCollapsed");
   toggleHidden = (e) => this.toggleValue(e, "isHidden");
 
-  removeItem = (e) => {
+  removeForm = (e) => {
     const form = e.target.closest(".section-form");
     const { arrayName } = form.dataset;
     const array = this.state[arrayName];
@@ -165,7 +169,7 @@ class App extends Component {
             onCancel={this.cancelForm}
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
-            onRemove={this.removeItem}
+            onRemove={this.removeForm}
           />
 
           <AddExperienceSection
@@ -177,7 +181,7 @@ class App extends Component {
             onCancel={this.cancelForm}
             toggleCollapsed={this.toggleCollapsed}
             onHide={this.toggleHidden}
-            onRemove={this.removeItem}
+            onRemove={this.removeForm}
           />
         </div>
 
