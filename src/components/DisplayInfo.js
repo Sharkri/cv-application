@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../styles/EducationInfoSection.css";
 
 class DisplayInfo extends Component {
   render() {
