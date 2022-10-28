@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../styles/ExperienceInfoSection.css";
 import ExperienceInfo from "./ExperienceInfo";
-import DisplayInfo from "../DisplayInfoSection";
+import DisplayInfo from "../DisplayInfo";
 import ResumeHeaderSection from "../ResumeHeaderSection";
 
 class ExperienceInfoSection extends Component {

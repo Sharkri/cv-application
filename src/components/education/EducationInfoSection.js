@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../styles/EducationInfoSection.css";
 import EducationInfo from "./EducationInfo";
-import DisplayInfo from "../DisplayInfoSection";
+import DisplayInfo from "../DisplayInfo";
 import ResumeHeaderSection from "../ResumeHeaderSection";
 
 class EducationInfoSection extends Component {
