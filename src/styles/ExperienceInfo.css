@@ -13,9 +13,10 @@
 }
 
 .experience-info-positionTitle {
-  font-size: 15.3px;
+  font-size: 15.4px;
 }
 
 .experience-info-description {
+  margin-top: 4px;
   white-space: pre-wrap;
 }
