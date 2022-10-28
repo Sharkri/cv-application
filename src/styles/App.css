@@ -17,31 +17,3 @@ form {
   padding: 18px;
   border-radius: 12px;
 }
-
-.chevron {
-  transition: transform 0.3s;
-}
-
-.chevron.closed {
-  transform: rotate(-180deg);
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  border-radius: 12px;
-}
-
-.section-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.section-content.closed {
-  display: none;
-}

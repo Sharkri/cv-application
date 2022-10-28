@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ExpandSection from "../ExpandSection";
 import CreateForm from "../CreateForm";
-import "../../styles/AddEducationSection.css";
+import "../../styles/Section.css";
 import DisplayForms from "../DisplayForms";
 import ExperienceForm from "./ExperienceForm";
 

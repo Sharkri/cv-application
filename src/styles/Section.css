@@ -1,3 +1,31 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.section-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.section-content.closed {
+  display: none;
+}
+
+.chevron {
+  transition: transform 0.3s;
+}
+
+.chevron.closed {
+  transform: rotate(-180deg);
+}
+
 .education-form {
   display: flex;
   flex-direction: column;
@@ -19,6 +47,7 @@
 
 .dates-group {
   display: flex;
+  gap: 16px;
   width: 100%;
   flex-wrap: wrap;
 }

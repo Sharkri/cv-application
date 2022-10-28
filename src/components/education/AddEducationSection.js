@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DisplayForms from "../DisplayForms";
 import ExpandSection from "../ExpandSection";
 import CreateForm from "../CreateForm";
-import "../../styles/AddEducationSection.css";
+import "../../styles/Section.css";
 import EducationForm from "./EducationForm";
 
 class AddEducationSection extends Component {
