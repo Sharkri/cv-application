@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import InputGroup from "../InputGroup";
 
-class EducationForm extends Component {
+class ExperienceForm extends Component {
   render() {
     const {
       companyName,
@@ -99,4 +99,4 @@ class EducationForm extends Component {
   }
 }
 
-export default EducationForm;
+export default ExperienceForm;

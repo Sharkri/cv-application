@@ -13,7 +13,7 @@ class DisplayForms extends Component {
       FormComponent,
     } = this.props;
     return (
-      <div className="education-forms-container">
+      <div className="forms-container">
         {forms.map((form) =>
           form.isCollapsed ? (
             <CollapsedForm
