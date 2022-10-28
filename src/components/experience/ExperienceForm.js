@@ -17,7 +17,7 @@ class EducationForm extends Component {
 
     return (
       <form
-        className="experience-form"
+        className="experience-form input-form"
         id={id}
         data-array-name="experiences"
         onSubmit={(e) => e.preventDefault()}

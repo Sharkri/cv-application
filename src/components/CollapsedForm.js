@@ -6,21 +6,18 @@ class CollapsedForm extends Component {
     const { onClick, hideForm } = this.props;
     const { isHidden, title, id } = this.props.form;
     return (
-      <button
-        className="collapsed-form form"
-        id={id}
-        onClick={onClick}
-        data-array-name="educations"
-      >
-        <p className="collapsed-form-title">{title}</p>
-        <i
-          className={`fa-regular ${isHidden ? "fa-eye-slash" : "fa-eye"} eye`}
-          onClick={(e) => {
-            e.stopPropagation();
-            hideForm(e);
-          }}
-        ></i>
-      </button>
+      <form id={id} data-array-name="educations">
+        <button className="collapsed-form" onClick={onClick} type="button">
+          <p className="collapsed-form-title">{title}</p>
+          <i
+            className={`fa-regular ${isHidden ? "fa-eye-slash" : "fa-eye"} eye`}
+            onClick={(e) => {
+              e.stopPropagation();
+              hideForm(e);
+            }}
+          ></i>
+        </button>
+      </form>
     );
   }
 }

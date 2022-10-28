@@ -32,7 +32,7 @@ class App extends Component {
 
   handleSectionChange = (e) => {
     const { key } = e.target.dataset;
-    const form = e.target.closest(".form");
+    const form = e.target.closest("form");
     const { id } = form;
     const { arrayName } = form.dataset;
     const array = this.state[arrayName];
@@ -84,7 +84,7 @@ class App extends Component {
 
   setOpen = (sectionName) => this.setState({ sectionOpen: sectionName });
   cancelForm = (e) => {
-    const form = e.target.closest(".form");
+    const form = e.target.closest("form");
     const { id } = form;
     const { arrayName } = form.dataset;
     const array = this.state[arrayName];
@@ -103,7 +103,7 @@ class App extends Component {
   };
 
   toggleValue = (e, key) => {
-    const form = e.target.closest(".form");
+    const form = e.target.closest("form");
     const { id } = form;
     const { arrayName } = form.dataset;
     const array = this.state[arrayName];
@@ -124,7 +124,7 @@ class App extends Component {
   toggleHidden = (e) => this.toggleValue(e, "isHidden");
 
   removeItem = (e) => {
-    const form = e.target.closest(".form");
+    const form = e.target.closest("form");
     const { arrayName } = form.dataset;
     const array = this.state[arrayName];
     const { id } = form;
