@@ -18,6 +18,7 @@ class Resume extends Component {
           phoneNumber={phoneNumber}
           address={address}
         />
+
         <EducationInfoSection educations={educations} />
         <ExperienceInfoSection experiences={experiences} />
       </div>
