@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import InputGroup from "../InputGroup";
+import Buttons from "../Buttons";
 
 class ExperienceForm extends Component {
   render() {
@@ -80,20 +81,7 @@ class ExperienceForm extends Component {
           data-key="description"
           optional
         />
-        <div className="buttons">
-          <button className="delete" onClick={remove} type="button">
-            <i className="fa-solid fa-trash" />
-            Delete
-          </button>
-          <div className="main-buttons">
-            <button className="cancel" onClick={cancel} type="button">
-              Cancel
-            </button>
-            <button className="save" onClick={save} type="submit">
-              Save
-            </button>
-          </div>
-        </div>
+        <Buttons save={save} cancel={cancel} remove={remove} />
       </form>
     );
   }
