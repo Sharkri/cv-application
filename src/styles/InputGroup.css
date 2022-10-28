@@ -9,6 +9,7 @@ textarea {
 textarea {
   max-width: 100%;
   min-height: 42px;
+  height: 65px;
 }
 
 input:focus,
