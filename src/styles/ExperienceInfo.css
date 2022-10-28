@@ -15,3 +15,7 @@
 .experience-info-positionTitle {
   font-size: 15.3px;
 }
+
+.experience-info-description {
+  white-space: pre-wrap;
+}

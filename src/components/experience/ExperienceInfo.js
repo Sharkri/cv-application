@@ -25,7 +25,7 @@ class ExperienceInfo extends Component {
         <div className="experience-info-group">
           <p className="experience-info-companyName">{companyName}</p>
           <p className="experience-info-positionTitle">{positionTitle}</p>
-          <p>{description}</p>
+          <p className="experience-info-description">{description}</p>
         </div>
       </div>
     );
