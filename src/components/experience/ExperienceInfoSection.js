@@ -10,7 +10,7 @@ class ExperienceInfoSection extends Component {
         <DisplaySection
           array={experiences}
           InfoComponent={ExperienceInfo}
-          title="Experiences"
+          title="Professional Experience"
         />
       </div>
     );
