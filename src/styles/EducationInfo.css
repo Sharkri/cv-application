@@ -1,9 +1,3 @@
-.education-info-container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
 .education-info {
   display: flex;
   gap: 18px;
