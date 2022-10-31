@@ -1,7 +1,6 @@
 import "../../styles/ExperienceInfo.css";
 
 function ExperienceInfo({ info }) {
-  console.log(info.companyName);
   return (
     <div className="experience-info">
       <div className="experience-info-group">
