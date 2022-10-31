@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/CollapsedForm.css";
 
 function CollapsedForm(props) {

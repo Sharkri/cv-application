@@ -1,4 +1,3 @@
-import React from "react";
 import ExpandSection from "../ExpandSection";
 import CreateForm from "../CreateForm";
 import "../../styles/Section.css";

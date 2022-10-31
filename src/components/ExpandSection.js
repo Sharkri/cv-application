@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/ExpandSection.css";
 
 function ExpandSection({ isClosed, setOpen, sectionName, iconName }) {

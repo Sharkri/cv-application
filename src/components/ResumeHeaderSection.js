@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/ResumeHeaderSection.css";
 
 const ResumeHeaderSection = ({ title }) => (

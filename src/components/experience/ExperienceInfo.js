@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/ExperienceInfo.css";
 
 function ExperienceInfo({ info }) {

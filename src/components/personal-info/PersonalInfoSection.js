@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/PersonalInfoSection.css";
 
 function PersonalInfoSection({ email, fullName, phoneNumber, address }) {

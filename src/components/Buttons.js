@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/Buttons.css";
 
 function Buttons({ cancel, save, remove }) {

@@ -1,4 +1,3 @@
-import React from "react";
 import EducationInfo from "./EducationInfo";
 import DisplaySection from "../DisplaySection";
 

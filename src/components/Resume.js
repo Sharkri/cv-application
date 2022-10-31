@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/Resume.css";
 import PersonalInfoSection from "./personal-info/PersonalInfoSection";
 import EducationInfoSection from "./education/EducationInfoSection";

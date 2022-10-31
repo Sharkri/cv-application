@@ -1,4 +1,3 @@
-import React from "react";
 import ExperienceInfo from "./ExperienceInfo";
 import DisplaySection from "../DisplaySection";
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import "./styles/App.css";
 import PersonalDetails from "./components/personal-info/PersonalDetails";
 import AddEducationSection from "./components/education/AddEducationSection";
