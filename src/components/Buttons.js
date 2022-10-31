@@ -1,9 +1,7 @@
 import React from "react";
 import "../styles/Buttons.css";
 
-function Buttons(props) {
-  const { cancel, save, remove } = props;
-
+function Buttons({ cancel, save, remove }) {
   return (
     <div className="buttons">
       <button className="delete" onClick={remove} type="button">

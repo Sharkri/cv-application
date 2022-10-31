@@ -1,8 +1,7 @@
 import React from "react";
 import "../styles/ExpandSection.css";
 
-function ExpandSection(props) {
-  const { isClosed, setOpen, sectionName, iconName } = props;
+function ExpandSection({ isClosed, setOpen, sectionName, iconName }) {
   return (
     <button
       className="expand-section"

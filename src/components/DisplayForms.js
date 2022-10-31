@@ -1,18 +1,17 @@
 import React from "react";
 import CollapsedForm from "./CollapsedForm";
 
-function DisplayForms(props) {
-  const {
-    forms,
-    onChange,
-    onCancel,
-    toggleCollapsed,
-    onHide,
-    onRemove,
-    FormComponent,
-    titleKey,
-    arrayName,
-  } = props;
+function DisplayForms({
+  forms,
+  onChange,
+  onCancel,
+  toggleCollapsed,
+  onHide,
+  onRemove,
+  FormComponent,
+  titleKey,
+  arrayName,
+}) {
   return (
     <div className="forms-container">
       {forms.map((form) =>
