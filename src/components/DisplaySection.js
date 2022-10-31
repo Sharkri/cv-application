@@ -2,6 +2,7 @@ import React from "react";
 import ResumeHeaderSection from "./ResumeHeaderSection";
 
 function DisplaySection({ array, InfoComponent, title }) {
+  console.log(array);
   return (
     <React.Fragment>
       {/* Hide resume header if every child in array is hidden. */}

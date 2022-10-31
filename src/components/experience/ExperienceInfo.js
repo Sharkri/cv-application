@@ -1,35 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../styles/ExperienceInfo.css";
 
-class ExperienceInfo extends Component {
-  render() {
-    const {
-      companyName,
-      positionTitle,
-      location,
-      description,
-      startDate,
-      endDate,
-    } = this.props.info;
-    return (
-      <div className="experience-info">
-        <div className="experience-info-group">
-          <p className="dates">
-            {startDate}
-            {startDate && endDate && <span> – </span>}
-            {endDate}
-          </p>
-          <p>{location}</p>
-        </div>
-
-        <div className="experience-info-group">
-          <p className="experience-info-companyName">{companyName}</p>
-          <p className="experience-info-positionTitle">{positionTitle}</p>
-          <p className="experience-info-description">{description}</p>
-        </div>
+function ExperienceInfo({ info }) {
+  console.log(info.companyName);
+  return (
+    <div className="experience-info">
+      <div className="experience-info-group">
+        <p className="dates">
+          {info.startDate}
+          {info.startDate && info.endDate && <span> – </span>}
+          {info.endDate}
+        </p>
+        <p>{info.location}</p>
       </div>
-    );
-  }
+
+      <div className="experience-info-group">
+        <p className="experience-info-companyName">{info.companyName}</p>
+        <p className="experience-info-positionTitle">{info.positionTitle}</p>
+        <p className="experience-info-description">{info.description}</p>
+      </div>
+    </div>
+  );
 }
 
 export default ExperienceInfo;
