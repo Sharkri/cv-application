@@ -162,7 +162,7 @@ class App extends Component {
 
           <AddEducationSection
             educations={educations}
-            isClosed={sectionOpen !== "Education" ? "closed" : ""}
+            isClosed={sectionOpen === "Education" ? "open" : "closed"}
             onChange={this.handleSectionChange}
             createForm={this.createEducationForm}
             setOpen={this.setOpen}
@@ -174,7 +174,7 @@ class App extends Component {
 
           <AddExperienceSection
             experiences={experiences}
-            isClosed={sectionOpen !== "Experience" ? "closed" : ""}
+            isClosed={sectionOpen === "Experience" ? "open" : "closed"}
             onChange={this.handleSectionChange}
             createForm={this.createExperienceForm}
             setOpen={this.setOpen}
