@@ -74,7 +74,7 @@ class ExperienceForm extends Component {
         <InputGroup
           type="textarea"
           id="description"
-          labelText="description"
+          labelText="Description"
           placeholder="Enter Description"
           value={description}
           onChange={onChange}
