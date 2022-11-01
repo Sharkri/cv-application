@@ -17,3 +17,15 @@
 button {
   cursor: pointer;
 }
+
+.header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+  text-align: center;
+  border-radius: 2px;
+  padding: 4px 0;
+  background-color: rgba(14, 55, 78, 0.07);
+  color: var(--main-resume-color);
+}
