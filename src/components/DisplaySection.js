@@ -1,13 +1,14 @@
 import React from "react";
-import ResumeHeaderSection from "./ResumeHeaderSection";
 
 function DisplaySection({ array, InfoComponent, title }) {
   return (
     <React.Fragment>
-      {/* Hide resume header if every child in array is hidden. */}
-      {!array.every((obj) => obj.isHidden) && (
-        <ResumeHeaderSection title={title} />
-      )}
+      {
+        // Show resume header if at least one item in array is not hidden.
+        !array.every((obj) => obj.isHidden) && (
+          <h3 className="header-text">{title}</h3>
+        )
+      }
 
       {array.map(
         (info) => !info.isHidden && <InfoComponent info={info} key={info.id} />
