@@ -1,0 +1,27 @@
+.template-loader {
+  padding: 18px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.template-loader button {
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: none;
+  font-family: "NotoSans-bold";
+  flex-grow: 1;
+}
+
+.template-loader .clear-resume {
+  background-color: transparent;
+  color: #b91c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14.5px;
+}

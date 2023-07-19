@@ -5,6 +5,8 @@ import AddEducationSection from "./components/education/AddEducationSection";
 import AddExperienceSection from "./components/experience/AddExperienceSection";
 import Resume from "./components/Resume";
 import uniqid from "uniqid";
+import TemplateLoader from "./components/TemplateLoader";
+import exampleData from "./example-data";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -135,6 +137,23 @@ function App() {
   return (
     <div className="app">
       <div className="form-container">
+        <TemplateLoader
+          onTemplateLoad={() => {
+            setPersonalInfo(exampleData.personalInfo);
+            setSections(exampleData.sections);
+          }}
+          onClear={() => {
+            setPersonalInfo({
+              fullName: "",
+              email: "",
+              phoneNumber: "",
+              address: "",
+            });
+            setSections({ educations: [], experiences: [] });
+            setPrevState(null);
+          }}
+        />
+
         <PersonalDetails
           onChange={handlePersonalInfoChange}
           fullName={personalInfo.fullName}
