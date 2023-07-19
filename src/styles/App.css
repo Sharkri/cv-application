@@ -1,8 +1,10 @@
 .app {
   display: flex;
-  justify-content: center;
+  margin: auto;
+  width: 100%;
   padding: 32px 24px;
   gap: 24px;
+  max-width: 1500px;
 }
 
 .form-container {
