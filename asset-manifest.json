@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cv-application/static/css/main.7ebfd873.css",
-    "main.js": "/cv-application/static/js/main.df4deb64.js",
+    "main.css": "/cv-application/static/css/main.1f10b224.css",
+    "main.js": "/cv-application/static/js/main.5578bd60.js",
     "static/media/NotoSans-Bold.ttf": "/cv-application/static/media/NotoSans-Bold.23e70cfbbe0783c66804.ttf",
     "static/media/NotoSans-SemiBold.ttf": "/cv-application/static/media/NotoSans-SemiBold.99df72e26c72877cb1f9.ttf",
     "static/media/NotoSans-Regular.ttf": "/cv-application/static/media/NotoSans-Regular.eae34fa8f1e0c4c6d797.ttf",
@@ -14,11 +14,11 @@
     "static/media/fa-v4compatibility.ttf": "/cv-application/static/media/fa-v4compatibility.f601162ae669f88823a3.ttf",
     "static/media/fa-v4compatibility.woff2": "/cv-application/static/media/fa-v4compatibility.745989aab0d69cab7e70.woff2",
     "index.html": "/cv-application/index.html",
-    "main.7ebfd873.css.map": "/cv-application/static/css/main.7ebfd873.css.map",
-    "main.df4deb64.js.map": "/cv-application/static/js/main.df4deb64.js.map"
+    "main.1f10b224.css.map": "/cv-application/static/css/main.1f10b224.css.map",
+    "main.5578bd60.js.map": "/cv-application/static/js/main.5578bd60.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ebfd873.css",
-    "static/js/main.df4deb64.js"
+    "static/css/main.1f10b224.css",
+    "static/js/main.5578bd60.js"
   ]
 }
