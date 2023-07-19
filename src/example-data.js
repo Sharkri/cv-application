@@ -21,7 +21,7 @@ const exampleData = {
         id: uniqid(),
       },
       {
-        degree: "Masters Degree in Math",
+        degree: "Master's Degree in Math",
         schoolName: "Hidden University",
         location: "New York City, US",
         startDate: "08/2020",
