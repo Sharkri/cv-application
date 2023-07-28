@@ -11,14 +11,8 @@ import Sidebar from "./components/Sidebar";
 import Customize from "./components/Customize";
 
 function App() {
-  const [personalInfo, setPersonalInfo] = useState({
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
-  });
-
-  const [sections, setSections] = useState({ educations: [], experiences: [] });
+  const [personalInfo, setPersonalInfo] = useState(exampleData.personalInfo);
+  const [sections, setSections] = useState(exampleData.sections);
   const [sectionOpen, setSectionOpen] = useState(null);
   const [currentPage, setCurrentPage] = useState("content");
 
@@ -140,7 +134,7 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar onGoToPage={setCurrentPage} />
+      <Sidebar onGoToPage={setCurrentPage} page={currentPage} />
       <div className="form-container">
         <TemplateLoader
           onTemplateLoad={() => {

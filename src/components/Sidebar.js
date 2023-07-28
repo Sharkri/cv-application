@@ -1,10 +1,22 @@
 import "../styles/Sidebar.css";
 
-export default function Sidebar({ onGoToPage }) {
+export default function Sidebar({ onGoToPage, page }) {
   return (
     <nav className="sidebar">
-      <button onClick={() => onGoToPage("content")}>content</button>
-      <button onClick={() => onGoToPage("customize")}>customize</button>
+      <button
+        onClick={() => onGoToPage("content")}
+        data-selected={page === "content"}
+      >
+        <i class="fa-regular fa-file-lines" />
+        Content
+      </button>
+      <button
+        onClick={() => onGoToPage("customize")}
+        data-selected={page === "customize"}
+      >
+        <i class="fa-solid fa-pen-ruler" />
+        Customize
+      </button>
     </nav>
   );
 }

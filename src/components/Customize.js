@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/Customize.css";
 
 function hexToRgb(hex) {

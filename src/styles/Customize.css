@@ -21,6 +21,7 @@ input[type="color"] {
   border: 0;
   border-radius: 999px;
   padding: 0;
+  cursor: pointer;
 }
 
 input[type="color"]::-webkit-color-swatch {
