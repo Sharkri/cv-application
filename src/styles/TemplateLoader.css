@@ -8,8 +8,11 @@
   gap: 12px;
 }
 
+.template-loader .load-example {
+  padding: 6px;
+}
+
 .template-loader button {
-  padding: 6px 16px;
   border-radius: 4px;
   border: none;
   font-family: "NotoSans-bold";
@@ -23,5 +26,5 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 14.5px;
+  font-size: 14px;
 }

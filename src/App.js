@@ -7,6 +7,8 @@ import Resume from "./components/Resume";
 import uniqid from "uniqid";
 import TemplateLoader from "./components/TemplateLoader";
 import exampleData from "./example-data";
+import Sidebar from "./components/Sidebar";
+import Customize from "./components/Customize";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -18,6 +20,8 @@ function App() {
 
   const [sections, setSections] = useState({ educations: [], experiences: [] });
   const [sectionOpen, setSectionOpen] = useState(null);
+  const [currentPage, setCurrentPage] = useState("content");
+
   // Store prevState to revert changes when user clicks "cancel"
   const [prevState, setPrevState] = useState(null);
   function handlePersonalInfoChange(e) {
@@ -136,6 +140,7 @@ function App() {
 
   return (
     <div className="app">
+      <Sidebar onGoToPage={setCurrentPage} />
       <div className="form-container">
         <TemplateLoader
           onTemplateLoad={() => {
@@ -153,38 +158,41 @@ function App() {
             setPrevState(null);
           }}
         />
-
-        <PersonalDetails
-          onChange={handlePersonalInfoChange}
-          fullName={personalInfo.fullName}
-          email={personalInfo.email}
-          phoneNumber={personalInfo.phoneNumber}
-          address={personalInfo.address}
-        />
-
-        <AddEducationSection
-          educations={sections.educations}
-          isClosed={sectionOpen === "Education" ? "" : "closed"}
-          onChange={handleSectionChange}
-          createForm={createEducationForm}
-          setOpen={setOpen}
-          onCancel={cancelForm}
-          toggleCollapsed={toggleCollapsed}
-          onHide={toggleHidden}
-          onRemove={removeForm}
-        />
-
-        <AddExperienceSection
-          experiences={sections.experiences}
-          isClosed={sectionOpen === "Experience" ? "" : "closed"}
-          onChange={handleSectionChange}
-          createForm={createExperienceForm}
-          setOpen={setOpen}
-          onCancel={cancelForm}
-          toggleCollapsed={toggleCollapsed}
-          onHide={toggleHidden}
-          onRemove={removeForm}
-        />
+        {currentPage === "content" ? (
+          <>
+            <PersonalDetails
+              onChange={handlePersonalInfoChange}
+              fullName={personalInfo.fullName}
+              email={personalInfo.email}
+              phoneNumber={personalInfo.phoneNumber}
+              address={personalInfo.address}
+            />
+            <AddEducationSection
+              educations={sections.educations}
+              isClosed={sectionOpen === "Education" ? "" : "closed"}
+              onChange={handleSectionChange}
+              createForm={createEducationForm}
+              setOpen={setOpen}
+              onCancel={cancelForm}
+              toggleCollapsed={toggleCollapsed}
+              onHide={toggleHidden}
+              onRemove={removeForm}
+            />
+            <AddExperienceSection
+              experiences={sections.experiences}
+              isClosed={sectionOpen === "Experience" ? "" : "closed"}
+              onChange={handleSectionChange}
+              createForm={createExperienceForm}
+              setOpen={setOpen}
+              onCancel={cancelForm}
+              toggleCollapsed={toggleCollapsed}
+              onHide={toggleHidden}
+              onRemove={removeForm}
+            />
+          </>
+        ) : (
+          <Customize />
+        )}
       </div>
 
       <Resume

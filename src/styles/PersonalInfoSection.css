@@ -1,7 +1,7 @@
 .personal-info {
-  background-color: var(--main-resume-color);
+  background-color: var(--resume-accent);
+  color: var(--header-resume-color);
   width: 100%;
-  color: white;
   padding: 36px 24px;
   margin-bottom: 27px;
 }

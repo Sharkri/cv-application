@@ -21,8 +21,10 @@
 }
 
 body {
+  --resume-accent: #0e374e;
+  --header-resume-color: white;
+  --section-resume-bg: rgba(14, 55, 78, 0.07);
   --main-bg-color: #f3f4f6;
-  --main-resume-color: rgb(14, 55, 78);
   background-color: var(--main-bg-color);
 }
 

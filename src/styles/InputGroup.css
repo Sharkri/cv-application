@@ -1,5 +1,5 @@
-input,
-textarea {
+.input-group input,
+.input-group textarea {
   border: 2px solid transparent;
   background-color: var(--main-bg-color);
   padding: 10px;
@@ -7,14 +7,14 @@ textarea {
   transition: border 0.25s, box-shadow 0.25s;
 }
 
-textarea {
+.input-group textarea {
   max-width: 100%;
   min-height: 42px;
   height: 65px;
 }
 
-input:focus,
-textarea:focus {
+.input-group input:focus,
+.input-group textarea:focus {
   border-color: rgb(59, 131, 246);
   outline: none;
   box-shadow: 0px 3px 15px rgba(59, 131, 246, 0.2);
