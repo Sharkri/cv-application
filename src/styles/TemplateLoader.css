@@ -1,5 +1,5 @@
 .template-loader {
-  padding: 18px;
+  padding: 16px;
   background-color: white;
   border-radius: 12px;
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .template-loader .load-example {
-  padding: 6px;
+  padding: 7px 10px;
 }
 
 .template-loader button {
