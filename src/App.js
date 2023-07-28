@@ -134,7 +134,7 @@ function App() {
 
   return (
     <div className="app">
-      <div class="edit-side">
+      <div className="edit-side">
         <Sidebar onGoToPage={setCurrentPage} page={currentPage} />
         <div className="form-container">
           <TemplateLoader

@@ -17,15 +17,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "NotoSans", sans-serif;
 }
 
 body {
   --resume-accent: #0e374e;
+  --resume-font: "NotoSans", sans-serif;
+  --resume-bold: "NotoSans-Bold", sans-serif;
   --header-resume-color: white;
   --section-resume-bg: rgba(14, 55, 78, 0.07);
   --main-bg-color: #f3f4f6;
+  font-family: "NotoSans", sans-serif;
   background-color: var(--main-bg-color);
+}
+
+button {
+  font-family: inherit;
 }
 
 h1,

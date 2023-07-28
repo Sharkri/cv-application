@@ -9,7 +9,8 @@
 }
 
 .experience-info-companyName {
-  font-family: "NotoSans-bold";
+  font-family: var(--resume-bold);
+  font-weight: bold;
 }
 
 .experience-info-positionTitle {

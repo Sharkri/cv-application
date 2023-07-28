@@ -1,0 +1,29 @@
+.accent-color {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 17px;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 999px;
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 999px;
+  padding: 0;
+}

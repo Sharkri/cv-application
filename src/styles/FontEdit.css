@@ -1,0 +1,32 @@
+.font-select {
+  gap: 8px;
+  display: flex;
+}
+
+.font-select .serif-button {
+  font-family: serif;
+}
+
+.font-select button {
+  padding: 8px 12px;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+  width: 60px;
+  height: 70px;
+  background-color: transparent;
+  transition: 0.1s ease-in-out;
+}
+
+.font-select .font-test {
+  font-size: 24px;
+}
+
+.font-select button[data-selected="true"] {
+  background: #0e374e;
+  color: white;
+}
