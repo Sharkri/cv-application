@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cv-application/static/css/main.e5985f93.css",
+    "main.css": "/cv-application/static/css/main.f401c1bf.css",
     "main.js": "/cv-application/static/js/main.92ce01f4.js",
     "static/media/NotoSans-Bold.ttf": "/cv-application/static/media/NotoSans-Bold.23e70cfbbe0783c66804.ttf",
     "static/media/NotoSans-SemiBold.ttf": "/cv-application/static/media/NotoSans-SemiBold.99df72e26c72877cb1f9.ttf",
@@ -14,11 +14,11 @@
     "static/media/fa-v4compatibility.ttf": "/cv-application/static/media/fa-v4compatibility.f601162ae669f88823a3.ttf",
     "static/media/fa-v4compatibility.woff2": "/cv-application/static/media/fa-v4compatibility.745989aab0d69cab7e70.woff2",
     "index.html": "/cv-application/index.html",
-    "main.e5985f93.css.map": "/cv-application/static/css/main.e5985f93.css.map",
+    "main.f401c1bf.css.map": "/cv-application/static/css/main.f401c1bf.css.map",
     "main.92ce01f4.js.map": "/cv-application/static/js/main.92ce01f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5985f93.css",
+    "static/css/main.f401c1bf.css",
     "static/js/main.92ce01f4.js"
   ]
 }
