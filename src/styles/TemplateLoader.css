@@ -6,6 +6,8 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  position: sticky;
+  top: 0;
 }
 
 .template-loader .load-example {

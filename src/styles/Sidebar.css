@@ -4,8 +4,8 @@
   border-radius: 12px;
   height: fit-content;
   display: flex;
-  gap: 3px;
   flex-direction: column;
+  gap: 3px;
 }
 
 .sidebar button {

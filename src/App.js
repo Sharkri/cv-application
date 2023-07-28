@@ -134,59 +134,61 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar onGoToPage={setCurrentPage} page={currentPage} />
-      <div className="form-container">
-        <TemplateLoader
-          onTemplateLoad={() => {
-            setPersonalInfo(exampleData.personalInfo);
-            setSections(exampleData.sections);
-          }}
-          onClear={() => {
-            setPersonalInfo({
-              fullName: "",
-              email: "",
-              phoneNumber: "",
-              address: "",
-            });
-            setSections({ educations: [], experiences: [] });
-            setPrevState(null);
-          }}
-        />
-        {currentPage === "content" ? (
-          <>
-            <PersonalDetails
-              onChange={handlePersonalInfoChange}
-              fullName={personalInfo.fullName}
-              email={personalInfo.email}
-              phoneNumber={personalInfo.phoneNumber}
-              address={personalInfo.address}
-            />
-            <AddEducationSection
-              educations={sections.educations}
-              isClosed={sectionOpen === "Education" ? "" : "closed"}
-              onChange={handleSectionChange}
-              createForm={createEducationForm}
-              setOpen={setOpen}
-              onCancel={cancelForm}
-              toggleCollapsed={toggleCollapsed}
-              onHide={toggleHidden}
-              onRemove={removeForm}
-            />
-            <AddExperienceSection
-              experiences={sections.experiences}
-              isClosed={sectionOpen === "Experience" ? "" : "closed"}
-              onChange={handleSectionChange}
-              createForm={createExperienceForm}
-              setOpen={setOpen}
-              onCancel={cancelForm}
-              toggleCollapsed={toggleCollapsed}
-              onHide={toggleHidden}
-              onRemove={removeForm}
-            />
-          </>
-        ) : (
-          <Customize />
-        )}
+      <div class="edit-side">
+        <Sidebar onGoToPage={setCurrentPage} page={currentPage} />
+        <div className="form-container">
+          <TemplateLoader
+            onTemplateLoad={() => {
+              setPersonalInfo(exampleData.personalInfo);
+              setSections(exampleData.sections);
+            }}
+            onClear={() => {
+              setPersonalInfo({
+                fullName: "",
+                email: "",
+                phoneNumber: "",
+                address: "",
+              });
+              setSections({ educations: [], experiences: [] });
+              setPrevState(null);
+            }}
+          />
+          {currentPage === "content" ? (
+            <>
+              <PersonalDetails
+                onChange={handlePersonalInfoChange}
+                fullName={personalInfo.fullName}
+                email={personalInfo.email}
+                phoneNumber={personalInfo.phoneNumber}
+                address={personalInfo.address}
+              />
+              <AddEducationSection
+                educations={sections.educations}
+                isClosed={sectionOpen === "Education" ? "" : "closed"}
+                onChange={handleSectionChange}
+                createForm={createEducationForm}
+                setOpen={setOpen}
+                onCancel={cancelForm}
+                toggleCollapsed={toggleCollapsed}
+                onHide={toggleHidden}
+                onRemove={removeForm}
+              />
+              <AddExperienceSection
+                experiences={sections.experiences}
+                isClosed={sectionOpen === "Experience" ? "" : "closed"}
+                onChange={handleSectionChange}
+                createForm={createExperienceForm}
+                setOpen={setOpen}
+                onCancel={cancelForm}
+                toggleCollapsed={toggleCollapsed}
+                onHide={toggleHidden}
+                onRemove={removeForm}
+              />
+            </>
+          ) : (
+            <Customize />
+          )}
+        </div>
       </div>
 
       <Resume
