@@ -4,25 +4,21 @@ import EducationInfoSection from "./education/EducationInfoSection";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import ExperienceInfoSection from "./experience/ExperienceInfoSection";
 
-function Resume({
-  fullName,
-  email,
-  phoneNumber,
-  address,
-  educations,
-  experiences,
-}) {
+function Resume({ personalInfo, sections, layout }) {
   return (
-    <div className="resume">
-      <PersonalInfoSection
-        fullName={fullName}
-        email={email}
-        phoneNumber={phoneNumber}
-        address={address}
-      />
-
-      <EducationInfoSection educations={educations} />
-      <ExperienceInfoSection experiences={experiences} />
+    <div class="resume-container">
+      <div className={`resume ${layout}`}>
+        <PersonalInfoSection
+          fullName={personalInfo.fullName}
+          email={personalInfo.email}
+          phoneNumber={personalInfo.phoneNumber}
+          address={personalInfo.address}
+        />
+        <div>
+          <EducationInfoSection educations={sections.educations} />
+          <ExperienceInfoSection experiences={sections.experiences} />
+        </div>
+      </div>
     </div>
   );
 }

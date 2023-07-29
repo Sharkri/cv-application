@@ -15,7 +15,7 @@ function App() {
   const [sections, setSections] = useState(exampleData.sections);
   const [sectionOpen, setSectionOpen] = useState(null);
   const [currentPage, setCurrentPage] = useState("content");
-
+  const [resumeLayout, setResumeLayout] = useState("top");
   // Store prevState to revert changes when user clicks "cancel"
   const [prevState, setPrevState] = useState(null);
   function handlePersonalInfoChange(e) {
@@ -187,17 +187,17 @@ function App() {
             </>
           )}
 
-          <Customize isShown={currentPage === "customize"} />
+          <Customize
+            isShown={currentPage === "customize"}
+            onColChange={setResumeLayout}
+          />
         </div>
       </div>
 
       <Resume
-        fullName={personalInfo.fullName}
-        email={personalInfo.email}
-        phoneNumber={personalInfo.phoneNumber}
-        address={personalInfo.address}
-        educations={sections.educations}
-        experiences={sections.experiences}
+        personalInfo={personalInfo}
+        sections={sections}
+        layout={resumeLayout}
       />
     </div>
   );

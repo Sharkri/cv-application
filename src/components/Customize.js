@@ -1,13 +1,17 @@
-import "../styles/Customize.css";
-import AccentColorEdit from "./AccentColorEdit";
-import FontEdit from "./FontEdit";
+import "../styles/customize/Customize.css";
+import AccentColorEdit from "./customize/AccentColorEdit";
+import FontEdit from "./customize/FontEdit";
+import ResumeColsEdit from "./customize/ResumeColsEdit";
 
-export default function Customize({ isShown }) {
+export default function Customize({ isShown, onColChange }) {
   return (
     <div
       className="customize"
       style={{ display: isShown ? undefined : "none" }}
     >
+      <div>
+        <ResumeColsEdit onColChange={onColChange} />
+      </div>
       <div>
         <AccentColorEdit />
       </div>

@@ -3,7 +3,6 @@
   color: var(--header-resume-color);
   width: 100%;
   padding: 36px 24px;
-  margin-bottom: 27px;
 }
 
 .resume-name {
@@ -12,15 +11,21 @@
 
 .contact-info {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 18px;
+  margin: auto;
+  width: fit-content;
+}
+
+.resume.top .contact-info {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-info > div {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 6px;
 }

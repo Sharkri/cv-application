@@ -1,0 +1,23 @@
+.visual {
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+.top-visual {
+  background: linear-gradient(180deg, var(--resume-accent) 50%, white 50%);
+}
+
+.left-visual {
+  background: linear-gradient(90deg, var(--resume-accent) 50%, white 50%);
+}
+.right-visual {
+  background: linear-gradient(90deg, white 50%, var(--resume-accent) 50%);
+}
+
+.col-buttons button {
+  padding: 8px;
+  border: 0;
+  background-color: transparent;
+}

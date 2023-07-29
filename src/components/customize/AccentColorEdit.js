@@ -1,4 +1,4 @@
-import "../styles/AccentColorEdit.css";
+import "../../styles/customize/AccentColorEdit.css";
 
 function hexToRgb(hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
