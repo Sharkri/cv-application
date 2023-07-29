@@ -15,6 +15,7 @@ input[type="color"] {
   border-radius: 999px;
   padding: 0;
   cursor: pointer;
+  box-shadow: rgb(149, 157, 165) 0px 8px 24px;
 }
 
 input[type="color"]::-webkit-color-swatch {

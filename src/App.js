@@ -153,7 +153,7 @@ function App() {
               setPrevState(null);
             }}
           />
-          {currentPage === "content" ? (
+          {currentPage === "content" && (
             <>
               <PersonalDetails
                 onChange={handlePersonalInfoChange}
@@ -185,9 +185,9 @@ function App() {
                 onRemove={removeForm}
               />
             </>
-          ) : (
-            <Customize />
           )}
+
+          <Customize isShown={currentPage === "customize"} />
         </div>
       </div>
 
