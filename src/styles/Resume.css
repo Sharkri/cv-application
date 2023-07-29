@@ -19,6 +19,13 @@ button {
   cursor: pointer;
 }
 
+.resume h1,
+.resume h2,
+.resume h3 {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+}
+
 .header-text {
   display: flex;
   align-items: center;
@@ -29,5 +36,4 @@ button {
   padding: 4px 0;
   background-color: var(--section-resume-bg);
   color: var(--resume-accent);
-  font-family: var(--resume-bold);
 }
