@@ -5,8 +5,8 @@ export default function FontEdit() {
   const [font, setFont] = useState("sans");
 
   useEffect(() => {
-    let propertyFont = font === "sans" ? "NotoSans, sans-serif" : "serif";
-    let boldFont = font === "sans" ? "NotoSans-Bold, sans-serif" : "serif";
+    let propertyFont = font === "sans" ? "NotoSans, sans-serif" : font;
+    let boldFont = font === "sans" ? "NotoSans-Bold, sans-serif" : font;
 
     document.body.style.setProperty("--resume-font", propertyFont);
     document.body.style.setProperty("--resume-bold", boldFont);
@@ -17,7 +17,7 @@ export default function FontEdit() {
       <h2>Fonts</h2>
       <div className="font-select">
         <button
-          className="serif-button"
+          className="serif-btn"
           onClick={() => setFont("serif")}
           data-selected={font === "serif"}
         >
@@ -27,6 +27,14 @@ export default function FontEdit() {
         <button onClick={() => setFont("sans")} data-selected={font === "sans"}>
           <span className="font-test">Aa</span>
           Sans
+        </button>
+        <button
+          onClick={() => setFont("monospace")}
+          data-selected={font === "monospace"}
+          className="monospace-btn"
+        >
+          <span className="font-test">Aa</span>
+          Mono
         </button>
       </div>
     </>

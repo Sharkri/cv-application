@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 16px;
+}
+
 body {
   --resume-accent: #0e374e;
   --resume-font: "NotoSans", sans-serif;

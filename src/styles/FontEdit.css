@@ -3,8 +3,12 @@
   display: flex;
 }
 
-.font-select .serif-button {
+.font-select .serif-btn {
   font-family: serif;
+}
+
+.font-select .monospace-btn {
+  font-family: monospace;
 }
 
 .font-select button {
