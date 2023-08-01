@@ -4,7 +4,7 @@ export default function ResumeColsEdit({ onColChange }) {
   return (
     <>
       <h2>Layout</h2>
-      <div class="col-buttons">
+      <div className="col-buttons">
         <button onClick={() => onColChange("top")}>
           <div className="top-visual visual" />
           Top

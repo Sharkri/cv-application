@@ -6,7 +6,7 @@ import ExperienceInfoSection from "./experience/ExperienceInfoSection";
 
 function Resume({ personalInfo, sections, layout }) {
   return (
-    <div class="resume-container">
+    <div className="resume-container">
       <div className={`resume ${layout}`}>
         <PersonalInfoSection
           fullName={personalInfo.fullName}
