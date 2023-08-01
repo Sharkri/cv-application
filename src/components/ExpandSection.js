@@ -1,16 +1,16 @@
 import "../styles/ExpandSection.css";
 
-function ExpandSection({ isClosed, setOpen, sectionName, iconName }) {
+function ExpandSection({ isOpen, setOpen, sectionName, iconName }) {
   return (
     <button
       className="expand-section"
-      onClick={() => setOpen(isClosed ? sectionName : "")}
+      onClick={() => setOpen(isOpen ? "" : sectionName)}
     >
       <h2 className="expand-section-header">
         <i className={`${iconName}`} />
         {sectionName}
       </h2>
-      <i className={`fa-solid fa-chevron-up chevron ${isClosed}`} />
+      <i className={`fa-solid fa-chevron-up chevron ${isOpen ? "open" : ""}`} />
     </button>
   );
 }

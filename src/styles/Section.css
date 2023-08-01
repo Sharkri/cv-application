@@ -12,18 +12,29 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-50px);
+  height: 0;
+  transform-origin: top;
 }
 
-.section-content.closed {
-  display: none;
+.section-content.open {
+  transition: 0.2s;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
 }
 
 .chevron {
   transition: transform 0.3s;
+  transform: rotate(-180deg);
 }
 
-.chevron.closed {
-  transform: rotate(-180deg);
+.chevron.open {
+  transform: rotate(0);
 }
 
 .section-form:not(.collapsed-form) {

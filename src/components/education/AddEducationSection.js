@@ -6,7 +6,7 @@ import EducationForm from "./EducationForm";
 
 function AddEducationSection({
   educations,
-  isClosed,
+  isOpen,
   onChange,
   createForm,
   setOpen,
@@ -18,13 +18,13 @@ function AddEducationSection({
   return (
     <div className="add-education-section section">
       <ExpandSection
-        isClosed={isClosed}
+        isOpen={isOpen}
         setOpen={setOpen}
         sectionName="Education"
         iconName="fa-solid fa-graduation-cap"
       />
 
-      <div className={`section-content ${isClosed}`}>
+      <div className={`section-content ${isOpen ? "open" : ""}`}>
         <DisplayForms
           forms={educations}
           FormComponent={EducationForm}

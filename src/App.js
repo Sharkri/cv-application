@@ -164,7 +164,7 @@ function App() {
               />
               <AddEducationSection
                 educations={sections.educations}
-                isClosed={sectionOpen === "Education" ? "" : "closed"}
+                isOpen={sectionOpen === "Education"}
                 onChange={handleSectionChange}
                 createForm={createEducationForm}
                 setOpen={setOpen}
@@ -175,7 +175,7 @@ function App() {
               />
               <AddExperienceSection
                 experiences={sections.experiences}
-                isClosed={sectionOpen === "Experience" ? "" : "closed"}
+                isOpen={sectionOpen === "Experience"}
                 onChange={handleSectionChange}
                 createForm={createExperienceForm}
                 setOpen={setOpen}
