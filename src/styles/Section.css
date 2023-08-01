@@ -15,13 +15,15 @@
 
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-50px);
+  transform: translateY(-25px);
   height: 0;
   transform-origin: top;
+  z-index: 100;
 }
 
 .section-content.open {
-  transition: 0.2s;
+  transition: opacity, transform, visibility;
+  transition-duration: 0.25s;
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
