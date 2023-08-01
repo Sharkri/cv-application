@@ -10,7 +10,7 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 5;
   gap: 28px;
 }
 
