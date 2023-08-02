@@ -1,13 +1,15 @@
 .template-loader {
   padding: 12px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 12px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   position: sticky;
-  top: 0;
+  top: 8px;
+  z-index: 3;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .template-loader button {
