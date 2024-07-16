@@ -1,7 +1,7 @@
 import "../styles/Resume.css";
 import PersonalInfoSection from "./personal-info/PersonalInfoSection";
 import EducationInfoSection from "./education/EducationInfoSection";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fontawesome/fontawesome-free/css/all.min.css";
 import ExperienceInfoSection from "./experience/ExperienceInfoSection";
 
 function Resume({ personalInfo, sections, layout }) {
